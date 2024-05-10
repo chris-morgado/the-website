@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
+import fragmentShader from '../shaders/fragmentShader';
 
 const RotatingCube = () => {
   const meshRef = useRef();
@@ -16,6 +17,20 @@ const RotatingCube = () => {
   return (
     <mesh ref={meshRef}>
       <boxGeometry args={[1, 1, 1]} />
+      <shaderMaterial uniforms = 
+        {{
+            time: { value: 0 }
+        }}
+        fragmentShader={fragmentShader}
+        vertexShader={`
+            varying vec2 vUv;
+
+            void main(){
+                vUv = uv;
+                gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+            }
+        `}
+        />
       <meshStandardMaterial color='orange' />
     </mesh>
   );
@@ -23,11 +38,15 @@ const RotatingCube = () => {
 
 const WebGLCanvas = () => {
   return (
-    <Canvas style={{ width: '640px', height: '480px' }}>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <RotatingCube />
-    </Canvas>
+    <div className="circular-border">
+        <div className="canvas-wrapper">
+            <Canvas style={{ width: '640px', height: '480px' }}>
+                <ambientLight />
+                <pointLight position={[10, 10, 10]} />
+                <RotatingCube />
+            </Canvas>
+        </div>
+    </div>
   );
 };
 
