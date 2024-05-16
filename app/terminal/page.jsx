@@ -1,4 +1,4 @@
-import '../../styles/globals.css';
+import '../../styles/terminal.css';
 
 export default function Page() {
     return (

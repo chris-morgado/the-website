@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+import '../styles/terminal.css';
 import Link from 'next/link';
 
 export default function Home() {
