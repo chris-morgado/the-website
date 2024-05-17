@@ -9,3 +9,5 @@ Then navigate to the provided local link (i.e. http://localhost:3000).
 
 ## Dependencies:
 - WebGL/ThreeJS: @react-three/fiber
+- TailwindCSS: tailwindcss
+- FramerMotion: framer-motion

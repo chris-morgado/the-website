@@ -12,14 +12,16 @@ export default function MainNavBar() {
 	];
     
     return (
-        <div className="main-nav-container">
-            {leftNavData.map((item, index) => (
-                <NavItem key={`left-${index}`} navItem={item}></NavItem>   
-            ))}
-            <span></span>
-            {navData.map((item, index) => (
-                <NavItem key={index} navItem={item}></NavItem>
-            ))}    
+        <div className="outer-nav-container">
+            <div className="inner-nav-container">
+                {leftNavData.map((item, index) => (
+                    <NavItem key={`left-${index}`} navItem={item}></NavItem>   
+                ))}
+                <span></span>
+                {navData.map((item, index) => (
+                    <NavItem key={index} navItem={item}></NavItem>
+                ))}    
+            </div>
         </div>
     );
 }
