@@ -1,7 +1,7 @@
-import Link from "next/link";
+import NavItem from "./navitem";
 
 export default function MainNavBar() {
-    const leftNavdata = [
+    const leftNavData = [
         { name: "Home", link: "/" },
     ]
     
@@ -12,11 +12,13 @@ export default function MainNavBar() {
 	];
     
     return (
-        <div>
+        <div className="main-nav-container">
+            {leftNavData.map((item, index) => (
+                <NavItem key={`left-${index}`} navItem={item}></NavItem>   
+            ))}
+            <span></span>
             {navData.map((item, index) => (
-                <div id={`item-${index}`}>
-                    <Link key={index} href={item.link}>{item.name}</Link>
-                </div>
+                <NavItem key={index} navItem={item}></NavItem>
             ))}    
         </div>
     );
