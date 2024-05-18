@@ -31,6 +31,7 @@ html, body {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    align-items: center;
 
     margin-top: 0 auto;
     margin-bottom: 0 auto;
@@ -38,4 +39,22 @@ html, body {
     margin-right: 5%;
 
     height: 100%;
+}
+
+.nav-item{
+    display: flex;
+    align-items: center;
+    height: 45%;
+    background-color: rgb(57, 57, 57);
+    border-radius: 5px;
+
+    font-weight: 700;
+    font-style: normal;
+    font-size: large;
+    color: rgb(255, 255, 255);
+
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
 }

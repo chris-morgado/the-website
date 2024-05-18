@@ -1,6 +1,7 @@
 export default function NavItem({ navItem }) {
     return (
-        <>{navItem.name}</>
+        <div className="nav-item">
+            {navItem.name}
+        </div>
     );
 }
-{/* <p>{navItem.name}</p> */ }
