@@ -17,7 +17,7 @@ export default function MainNavBar() {
                 {leftNavData.map((item, index) => (
                     <NavItem key={`left-${index}`} navItem={item}></NavItem>   
                 ))}
-                <span></span>
+                <div style={{flex: '1'}}></div>
                 {navData.map((item, index) => (
                     <NavItem key={index} navItem={item}></NavItem>
                 ))}    
