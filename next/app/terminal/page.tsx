@@ -1,6 +1,7 @@
 import '../../styles/terminal.css';
+import React from 'react';
 
-export default function Page() {
+const Page: React.FC = () => {
     return (
         <div className="terminal">
             <div className="terminal-content">
@@ -9,3 +10,5 @@ export default function Page() {
         </div>
     );
 }
+
+export default Page;
