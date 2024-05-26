@@ -7,6 +7,7 @@ const Page: React.FC = () => {
             <div className="terminal-content">
                 <h1>welcome to the terminal :)</h1>
                 <h2>it is under construction...</h2>
+                {/* TODO: Add back button */}
             </div>
         </div>
     );

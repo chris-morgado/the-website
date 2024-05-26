@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 
@@ -9,9 +10,12 @@ interface NavItemProps {
 }
 
 const NavItem: React.FC<NavItemProps> = ({navItem}) => {
+    
     return (
         <div className="nav-item">
-            {navItem.name}
+            <Link href={navItem.link}>
+              {navItem.name}
+            </Link>
         </div>
     );
 }
