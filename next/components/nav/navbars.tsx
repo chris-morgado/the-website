@@ -15,7 +15,7 @@ const MainNavBar: React.FC = () => {
     const navData: NavItemData[] = [
         { name: "Projects", link: "/projects" },
         { name: "Contact", link: "/contact" },
-        // { name: "Terminal", link: "/terminal" }
+        { name: "Terminal", link: "/terminal" }
     ];
     
     return (
