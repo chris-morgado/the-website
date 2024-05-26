@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import '../../styles/terminal.css';
 import React from 'react';
 
@@ -8,6 +9,11 @@ const Page: React.FC = () => {
                 <h1>welcome to the terminal :)</h1>
                 <h2>it is under construction...</h2>
                 {/* TODO: Add back button */}
+                <div className="temporary">
+                    <Link href="/">
+                        Back to Home
+                    </Link>
+                </div>
             </div>
         </div>
     );

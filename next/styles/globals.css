@@ -64,6 +64,29 @@ html, body {
     padding-right: 15px;
     margin-left: 20px;
     margin-right: 20px;
+
+    transition: transform 0.2s, background-color 0.1s, color 0.1s; 
+}
+
+.nav-item:hover{
+    background-color: rgb(43, 43, 43);
+    color: rgb(234, 232, 232);
+    transform: scale(1.1);
+    cursor:pointer;
+}
+
+.nav-item:active{
+    background-color: rgb(6, 6, 6);
+    transform: scale(1.05);
+}
+
+.nav-item > a {
+    font-family: 'Rubik', sans-serif;
+    color: rgb(218, 218, 218);
+    text-decoration: none;
+}
+.nav-item:active > a {
+    color: rgb(177, 177, 177);
 }
 
 /* Animations */
