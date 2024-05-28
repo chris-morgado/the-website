@@ -29,7 +29,7 @@ html, body {
 .outer-nav-container {
     width: 100vw;
     height: 15%;
-    background: rgb(15, 15, 15);
+    background: linear-gradient(rgb(24, 24, 24), rgb(0, 0, 0));
     border-bottom: 2px solid rgb(36, 36, 36);
     box-shadow: 0 1px 1px -1px rgb(86, 86, 86);
 }
