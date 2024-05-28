@@ -1,4 +1,9 @@
+import { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+    title: 'Christian Morgado - Software Engineer',
+};
 
 interface RootLayoutProps {
     children: React.ReactNode;
