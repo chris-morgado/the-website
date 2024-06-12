@@ -8,16 +8,3 @@ type Project = {
     completed: boolean;
     tags?: string[]; 
 };
-
-{/* 
-    Projects:
-    - TestTail
-    - Rush Hour
-    - Club App
-    - CircuitCheatSheet
-    - U-Fund Application
-    - M.U.D.
-    - Coffee Minecraft Mod
-    - DegreeMap
-    - This Website!
-*/}

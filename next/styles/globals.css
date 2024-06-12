@@ -1,13 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* New Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
 
 /* Global styles */
-html,
-body {
+html, body {
     background: rgb(22, 22, 22);
     font-family: 'Rubik', sans-serif;
     color: rgb(218, 218, 218);
@@ -25,19 +20,6 @@ body {
     margin-bottom: 0 auto;
     margin-left: 15%;
     margin-right: 15%;
-}
-
-.title {
-    color: rgb(218, 218, 218);
-    font-weight: 800;
-    font-size: 3em;
-    /* em based on current browser size (3 * 16px if 16px is your browser size) */
-}
-
-.subtitle {
-    font-size: 1.3em;
-    font-weight: 500;
-    color: rgb(186, 186, 186);
 }
 
 .outer-nav-container {
@@ -62,7 +44,7 @@ body {
     height: 100%;
 }
 
-.nav-item {
+.nav-item{
     display: flex;
     align-items: center;
     height: 45%;
@@ -79,28 +61,27 @@ body {
     margin-left: 20px;
     margin-right: 20px;
 
-    transition: transform 0.2s, background-color 0.1s, color 0.1s;
+    transition: transform 0.2s, background-color 0.1s, color 0.1s; 
 }
 
-.nav-item:hover {
+.nav-item:hover{
     background-color: rgb(43, 43, 43);
     color: rgb(234, 232, 232);
     transform: scale(1.1);
-    cursor: pointer;
+    cursor:pointer;
 }
 
-.nav-item:active {
+.nav-item:active{
     background-color: rgb(6, 6, 6);
     transform: scale(1.05);
 }
 
-.nav-item>a {
+.nav-item > a {
     font-family: 'Rubik', sans-serif;
     color: rgb(218, 218, 218);
     text-decoration: none;
 }
-
-.nav-item:active>a {
+.nav-item:active > a {
     color: rgb(177, 177, 177);
 }
 
@@ -111,14 +92,13 @@ body {
     50%  {background-color:blue; left:200px; top:200px;}
     75%  {background-color:green; left:0px; top:200px;}
     100% {background-color:red; left:0px; top:0px;} */
-
-    0% {
-        opacity: 0;
+    
+    0% { 
+        opacity: 0; 
         top: 200px;
     }
-
-    100% {
-        opacity: 1;
+    100% { 
+        opacity: 1; 
         top: 0px;
     }
 }
@@ -132,28 +112,3 @@ body {
     position: relative;
     animation: fadeIn 5s;
 }
-
-/* .anim-typewriter {
-    animation: typewriter 4s steps(44) 1s 1 normal both,
-               blinkTextCursor 500ms steps(44) infinite normal;
-}
-
-@keyframes typewriter {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 24em;
-    }
-}
-
-@keyframes blinkTextCursor {
-    from {
-        border-right-color: rgba(255, 255, 255, .75);
-    }
-
-    to {
-        border-right-color: transparent;
-    }
-} */
