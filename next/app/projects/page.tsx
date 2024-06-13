@@ -1,15 +1,16 @@
 import React from 'react';
 import '../../styles/globals.css';
 import MainNavBar from '../../components/nav/navbars';
-import { projects } from './Projects';
 
-const ProjectsPage: React.FC = () => {
+const Projects: React.FC = () => {
     return (
-        <div className="homepage">
+        <div className="page">
             <MainNavBar />
-            projects page!
+            <div className="inner-page">
+                project page! 
+            </div>
         </div>
     );
 }
 
-export default ProjectsPage;
+export default Projects;

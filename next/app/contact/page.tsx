@@ -2,13 +2,15 @@ import React from 'react';
 import '../../styles/globals.css';
 import MainNavBar from '../../components/nav/navbars';
 
-const Home: React.FC = () => {
+const Contact: React.FC = () => {
     return (
-        <div className="homepage">
+        <div className="page">
             <MainNavBar />
-            contact page!
+            <div className="inner-page">
+                contact page!   
+            </div>
         </div>
     );
 }
 
-export default Home;
+export default Contact;

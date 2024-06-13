@@ -2,7 +2,7 @@ import Link from 'next/link';
 import '../../styles/terminal.css';
 import React from 'react';
 
-const Page: React.FC = () => {
+const Terminal: React.FC = () => {
     return (
         <div className="terminal">
             <div className="terminal-content">
@@ -19,4 +19,4 @@ const Page: React.FC = () => {
     );
 }
 
-export default Page;
+export default Terminal;

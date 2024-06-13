@@ -85,6 +85,28 @@ html, body {
     color: rgb(177, 177, 177);
 }
 
+.page {
+    height: 100%;
+}
+.inner-page {
+    margin-top: 0 auto;
+    margin-bottom: 0 auto;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+div.project-scroll-container {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+div.project-scroll-card {
+    padding: 10px;
+    border: 2px slategray;
+    border-radius: 5px;
+}
+
 /* Animations */
 @keyframes fadeIn {
     /* 0%   {background-color:red; left:0px; top:0px;}
