@@ -10,7 +10,8 @@ Projects:
 - DegreeMap <-- WIP
 - This Website! <-- WIP
 */}
-const projects: Project[] = [
+
+export const projects: Project[] = [
     {
         id: 9,
         slug: "/thewebsite",

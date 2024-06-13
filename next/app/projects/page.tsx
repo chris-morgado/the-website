@@ -1,8 +1,9 @@
 import React from 'react';
 import '../../styles/globals.css';
 import MainNavBar from '../../components/nav/navbars';
+import { projects } from './Projects';
 
-const Home: React.FC = () => {
+const ProjectsPage: React.FC = () => {
     return (
         <div className="homepage">
             <MainNavBar />
@@ -11,4 +12,4 @@ const Home: React.FC = () => {
     );
 }
 
-export default Home;
+export default ProjectsPage;
