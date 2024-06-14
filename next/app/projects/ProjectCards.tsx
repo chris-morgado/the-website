@@ -17,7 +17,7 @@ export const ProjectScrollCard: React.FC<ProjectCardProps> = ({project}) => {
     return (
         <>
             <div className="project-scroll-card">
-
+                {project.title}
 
             </div>
         </>

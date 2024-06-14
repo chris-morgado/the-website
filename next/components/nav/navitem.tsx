@@ -12,11 +12,11 @@ interface NavItemProps {
 const NavItem: React.FC<NavItemProps> = ({navItem}) => {
     
     return (
-        <div className="nav-item">
-            <Link href={navItem.link}>
-              {navItem.name}
-            </Link>
-        </div>
+        <Link href={navItem.link} className="nav-item">
+            <p>
+                {navItem.name}
+            </p>
+        </Link>
     );
 }
 
