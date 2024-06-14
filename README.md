@@ -1,7 +1,7 @@
 # the_website
 My personal website :)
 
-To run the website locally, run this command in the root directory: 
+To run the website locally, run this command in the /next directory: 
 ```
 npm run dev
 ```
