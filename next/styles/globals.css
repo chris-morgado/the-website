@@ -92,7 +92,7 @@ html, body {
     background-color: rgb(43, 43, 43);
     color: rgb(234, 232, 232);
     transform: scale(1.1);
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .nav-item:active{
@@ -111,6 +111,27 @@ html, body {
 @media (min-height: 900px) {
     .outer-nav-container {
         height: 10%;
+    }
+}
+@media (max-width: 1100px) {
+    .nav-item {
+        font-size: medium;
+    }
+}
+@media (max-width: 850px) {
+    .nav-item {
+        font-size: small;
+    }
+    .sub-nav-bar > .nav-item {
+        font-size: .9em;
+    }
+}
+@media (max-width: 650px) {
+    .nav-item {
+        font-size: smaller;
+    }
+    .sub-nav-bar > .nav-item {
+        font-size: .6em;
     }
 }
 
@@ -177,6 +198,28 @@ html, body {
     }
 } */
 
+.project-page-container {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.project-page-container > h1{
+    font-size: 60px;
+    margin-bottom: 0;
+}
+.project-page-container > h3{
+    font-size: 25ox;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.project-page-container > p{
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
 .projects-scroll-container {
     padding: 20px;
     background-color: #333;
@@ -201,11 +244,13 @@ html, body {
 
 /* Animations */
 @keyframes fadeIn {
-    /* 0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:yellow; left:200px; top:0px;}
-    50%  {background-color:blue; left:200px; top:200px;}
-    75%  {background-color:green; left:0px; top:200px;}
-    100% {background-color:red; left:0px; top:0px;} */
+    /* 
+        0%   {background-color:red; left:0px; top:0px;}
+        25%  {background-color:yellow; left:200px; top:0px;}
+        50%  {background-color:blue; left:200px; top:200px;}
+        75%  {background-color:green; left:0px; top:200px;}
+        100% {background-color:red; left:0px; top:0px;} 
+    */
     
     0% { 
         opacity: 0; 

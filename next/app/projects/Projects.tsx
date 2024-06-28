@@ -1,15 +1,41 @@
 {/* 
 Projects:
-- TestTail <-- WIP
-- Rush Hour <-- WIP
-- CircuitCheatSheet <-- WIP
-- Club App <-- WIP
-- U-Fund Application <-- WIP
-- M.U.D. <-- WIP
-- Coffee Minecraft Mod <-- WIP
-- DegreeMap <-- WIP
-- This Website! <-- WIP
+- TestTail <-- WIP, page made
+
+- Rush Hour <-- WIP, page made
+
+- CircuitCheatSheet <-- WIP, page made
+
+- Club App <-- WIP, page made
+
+- U-Fund Application <-- WIP, page made
+
+- M.U.D. <-- WIP, page made
+
+- Coffee Minecraft Mod <-- WIP, page made
+
+- DegreeMap <-- WIP, page made
+
+- This Website! <-- WIP, page made
 */}
+class Projects{
+    private static id: number;
+    private projects: Project[]
+    
+    public constructor(){
+        this.projects = [];
+        Projects.id = 0;
+    }
+
+    public getProjects(){
+        return this.projects;
+    }
+
+    public addProject(project: Project){
+        projects[projects.length] = project;
+    }
+}
+
 
 export const projects: Project[] = [
     {
