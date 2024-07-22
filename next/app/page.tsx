@@ -4,6 +4,7 @@ import '../styles/globals.css';
 import NavItem from '../components/nav/navitem';
 import { ProjectScrollCard } from './projects/ProjectCards';
 import { projects } from './projects/Projects';
+import Contact from '../components/common/Contact';
 
 const Home: React.FC = () => {
     return (
@@ -43,6 +44,9 @@ const Home: React.FC = () => {
 
                 <div className="contact-section">
                     <h1> Contacts & Profiles: </h1>
+                    <Contact name="Github" link=""></Contact>
+                    <Contact name="LinkedIn" link=""></Contact>
+                    <Contact name="Instagram" link=""></Contact>
                 </div>  
             </div>
         </div>

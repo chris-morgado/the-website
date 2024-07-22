@@ -260,6 +260,14 @@ html, body {
     margin-bottom: 5px;
   }
   
+  .contact-section {
+    margin-top: 10px;
+  }
+
+  .contact-component {
+    color: rgb(86, 173, 239);
+    text-decoration: none;    
+  }
 
 /* Animations */
 @keyframes fadeIn {
