@@ -2,6 +2,8 @@ import React from 'react';
 import MainNavBar from '../components/nav/navbars';
 import '../styles/globals.css';
 import NavItem from '../components/nav/navitem';
+import { ProjectScrollCard } from './projects/ProjectCards';
+import { projects } from './projects/Projects';
 
 const Home: React.FC = () => {
     return (
@@ -27,11 +29,20 @@ const Home: React.FC = () => {
                         <img src="images/me_in_the_wild.jpg" style={{width:'100%', height:'100%'}}></img>
                     </div>
                 </div>
+
+                {/* Later on: Professional Experience */}
+
                 <div className="project-scroll">
-                    <h1> My Projects: </h1>
+                    <h1> Featured Projects: </h1>
                     <div className="project-scroll-container">
-                    
+                        <ProjectScrollCard project={projects[8]}></ProjectScrollCard>
+                        <ProjectScrollCard project={projects[4]}></ProjectScrollCard>
+                        <ProjectScrollCard project={projects[3]}></ProjectScrollCard>
                     </div>
+                </div>  
+
+                <div className="contact-section">
+                    <h1> Contacts & Profiles: </h1>
                 </div>  
             </div>
         </div>

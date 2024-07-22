@@ -220,27 +220,46 @@ html, body {
 }
 
 
-.projects-scroll-container {
+.project-scroll-container {
     padding: 20px;
-    background-color: #333;
-    color: white;
+    background: linear-gradient(rgb(24, 24, 24), rgb(0, 0, 0));
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
 }
-.projects-scroll {
+.project-scroll {
     margin-top: 20px;
     margin-bottom: 20px;
-    display: flex;
-    overflow-x: auto; 
     gap: 10px; 
     padding: 10px 0;
 }
+
 .project-scroll-card {
-    flex: 0 0 auto; 
-    width: 200px;
-    padding: 20px;
-    background: #444;
+    background: linear-gradient(rgb(245, 245, 245), rgb(196, 196, 196));
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+    padding: 20px;
+    margin: 10px;
+    height: 100%;
+    width: 30%;
+    transition: transform .5s;
+    text-decoration: none;
+    color: black;
+  }
+  .project-scroll-card:hover {
+    background: linear-gradient(rgb(255, 255, 255), rgb(239, 239, 239));
+    transform: scale(1.10);
+  }
+  .project-scroll-card:active{
+    background: linear-gradient(rgb(211, 211, 211), rgb(189, 189, 189));
+    transform: scale(1.05);
+  }
+  
+  h2 {
+    margin-bottom: 5px;
+  }
+  
 
 /* Animations */
 @keyframes fadeIn {

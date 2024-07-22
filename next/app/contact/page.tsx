@@ -7,7 +7,11 @@ const Contact: React.FC = () => {
         <div className="page">
             <MainNavBar />
             <div className="inner-page">
-                contact page!   
+                <div className="header">
+                    <h1>
+                        Contacts:
+                    </h1>
+                </div>
             </div>
         </div>
     );
