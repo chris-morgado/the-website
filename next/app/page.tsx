@@ -14,10 +14,10 @@ const Home: React.FC = () => {
                 <div className="about-section">
                     <div className="header">
                         <h1>
-                            Hi, I'm Christian -- A Software Engineer from NYC!
+                            Chris Morgado
                         </h1>
                         <h3>
-                            I'm currently a 3rd year Software Engineering student at RIT :) <br></br> My SE interests are in embedded software, web development, both front-end and back-end work and working on fun little side projects. In my spare time I'm usually hiking & taking photos, playing the guitar, skating or playing RPGs!
+                            Welcome to my site!
                         </h3>
                         <div className="sub-nav-bar">
                             <NavItem key={`Resume`} navItem={{name: "Resume", link: "/resume"}}></NavItem>   
