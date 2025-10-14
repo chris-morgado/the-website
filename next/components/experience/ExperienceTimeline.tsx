@@ -1,4 +1,3 @@
-// components/experience/ExperienceTimeline.tsx
 import { ReactNode } from "react";
 
 type ExperienceItem = {
@@ -22,10 +21,9 @@ export function ExperienceTimeline({ items }: { items: ExperienceItem[] }) {
         </p>
       </header>
 
-      {/* Flowbite timeline */}
-      <ol className="relative border-s-2 border-neutral-700/70 ms-4 list-none">
+      <ol className="relative ms-4 list-none border-s-2 border-neutral-700/70">
         {items.map((it, i) => (
-          <li key={i} className="mb-10 ps-8 relative">
+          <li key={i} className="relative mb-10 ps-8">
             {/* dot on the rail */}
             <span className="absolute -start-3 top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-cyan-400 ring-8 ring-neutral-900" />
 
