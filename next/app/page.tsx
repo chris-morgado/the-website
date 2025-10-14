@@ -27,7 +27,7 @@ const Home: React.FC = () => {
                     </div>
                     <div style={{flex: '1'}}></div>
                     <div className="picture">
-                        <img src="images/me_in_the_wild.jpg" style={{width:'100%', height:'100%'}}></img>
+                        <img src="images/me_in_the_wild2.png" style={{width:'100%', height:'100%'}}></img>
                     </div>
                 </div>
 
