@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../../styles/globals.css';
 import MainNavBar from "../../../components/nav/navbars";
-import Links from '../../../components/common/Links';
 
 const TheWebsite: React.FC = () => {
     return (
@@ -10,7 +9,6 @@ const TheWebsite: React.FC = () => {
             <div className="inner-page">
                 <div className="project-page-container">
                     <h1>THE WEBSITE.</h1>
-                    <Links></Links>
 
                     <h2>Overview:</h2>
                     <p>Welcome to my personal website! Here, you'll find a showcase of some of the projects that I'm most proud of. Whether you're here to explore potential collaborations, to gain insights into specific technologies, or just to see what I've been up to, I hope you find something that inspires you.</p>

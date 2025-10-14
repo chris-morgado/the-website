@@ -5,6 +5,7 @@ import NavItem from '../components/nav/navitem';
 import { ProjectScrollCard } from './projects/ProjectCards';
 import { projects } from './projects/Projects';
 import Contact from '../components/common/Contact';
+import { GitHubLink } from '../components/common/GithubContact';
 
 const Home: React.FC = () => {
     return (
@@ -20,9 +21,8 @@ const Home: React.FC = () => {
                             Welcome to my site!
                         </h3>
                         <div className="sub-nav-bar">
+                            <GitHubLink link="https://github.com/chris-morgado"></GitHubLink>
                             <NavItem key={`Resume`} navItem={{name: "Resume", link: "/resume"}}></NavItem>   
-                            <NavItem key={`Contact`} navItem={{name: "Contact", link: "/contact"}}></NavItem>   
-                            <NavItem key={`Terminal`} navItem={{name: "Terminal", link: "/terminal"}}></NavItem>   
                         </div>
                     </div>
                     <div style={{flex: '1'}}></div>
