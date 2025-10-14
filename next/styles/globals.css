@@ -150,6 +150,7 @@ html, body {
 .about-section {
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
     justify-content: center;
     gap: 2%;
 }
@@ -160,10 +161,9 @@ html, body {
     width: 350px;
 }
 .header {
-    justify-content: space-between;
-    margin-top: 55px;
-    margin-bottom: 20px;
+    justify-content: center;
     width: 60%;
+    margin-bottom: 50px;
 }
 .header > h1 {
     font-weight: 700;
