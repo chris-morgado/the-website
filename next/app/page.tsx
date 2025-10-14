@@ -37,7 +37,7 @@ const Home: React.FC = () => {
         <div className="homepage">
             <MainNavBar />
             <div className="inner-homepage">
-                <div className="about-section">
+                <div className="about-section fade-on-load">
                     <div className="header">
                         <h1>
                             Chris Morgado
@@ -57,9 +57,11 @@ const Home: React.FC = () => {
                     </div>
                 </div>
 
-                <ExperienceTimeline items={experienceItems} />
+                <div className='fade-on-load'>
+                    <ExperienceTimeline items={experienceItems} />
+                </div>
 
-                <div className="project-scroll">
+                <div className="project-scroll fade-on-load">
                     <h1> Featured Projects: </h1>
                     <div className="project-scroll-container">
                         <ProjectScrollCard project={projects[8]}></ProjectScrollCard>
