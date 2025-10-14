@@ -7,6 +7,31 @@ import { projects } from './projects/Projects';
 import Contact from '../components/common/Contact';
 import { GitHubLink } from '../components/common/GithubContact';
 import { LinkedInLink } from '../components/common/LinkedInContact';
+import { ExperienceTimeline } from '../components/experience/ExperienceTimeline';
+
+
+const experienceItems = [
+    {
+      date: "May 2025",
+      title: "Intern",
+      team: "Team",
+      company: "Honda",
+      location: "Queens, NY",
+      blurb:
+        "Blah blah blah",
+      accent: "text-emerald-400",
+    },
+    {
+      date: "March 2025",
+      title: "SWE Intern",
+      team: "Team",
+      company: "Honda",
+      location: "Brooklyn, NY",
+      blurb:
+        "Blah blah blah",
+      accent: "text-emerald-400",
+    },
+  ]
 
 const Home: React.FC = () => {
     return (
@@ -33,7 +58,7 @@ const Home: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Later on: Professional Experience */}
+                <ExperienceTimeline items={experienceItems} />
 
                 <div className="project-scroll">
                     <h1> Featured Projects: </h1>
