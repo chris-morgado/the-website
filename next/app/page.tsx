@@ -6,6 +6,7 @@ import { ProjectScrollCard } from './projects/ProjectCards';
 import { projects } from './projects/Projects';
 import Contact from '../components/common/Contact';
 import { GitHubLink } from '../components/common/GithubContact';
+import { LinkedInLink } from '../components/common/LinkedInContact';
 
 const Home: React.FC = () => {
     return (
@@ -22,6 +23,7 @@ const Home: React.FC = () => {
                         </h3>
                         <div className="sub-nav-bar">
                             <GitHubLink link="https://github.com/chris-morgado"></GitHubLink>
+                            <LinkedInLink link="https://www.linkedin.com/in/chris-morgado/"></LinkedInLink>
                             <NavItem key={`Resume`} navItem={{name: "Resume", link: "/resume"}}></NavItem>   
                         </div>
                     </div>
@@ -40,14 +42,7 @@ const Home: React.FC = () => {
                         <ProjectScrollCard project={projects[4]}></ProjectScrollCard>
                         <ProjectScrollCard project={projects[3]}></ProjectScrollCard>
                     </div>
-                </div>  
-
-                <div className="contact-section">
-                    <h1> Contacts & Profiles: </h1>
-                    <Contact name="Github" link=""></Contact>
-                    <Contact name="LinkedIn" link=""></Contact>
-                    <Contact name="Instagram" link=""></Contact>
-                </div>  
+                </div>    
             </div>
         </div>
     );
