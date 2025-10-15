@@ -13,42 +13,105 @@ type ExperienceItem = {
 
 export function ExperienceTimeline({ items }: { items: ExperienceItem[] }) {
   return (
-    <section className="mx-auto max-w-4xl px-4">
-      <header className="mb-8 text-center">
-        <h2 className="text-4xl font-extrabold tracking-tight">Experience</h2>
-        <p className="mt-3 text-neutral-400">
-          My leadership and work experience over the past few years.
-        </p>
-      </header>
-
-      <ol className="relative ms-4 list-none border-s-2 border-neutral-700/70">
-        {items.map((it, i) => (
-          <li key={i} className="relative mb-10 ps-8">
-            {/* dot on the rail */}
-            <span className="absolute -start-3 top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-cyan-400 ring-8 ring-neutral-900" />
-
-            <time className="mb-1 block text-sm font-medium leading-none text-cyan-300/90">
-              {it.date}
-            </time>
-
-            <h3 className={`text-2xl font-extrabold leading-tight ${it.accent ?? "text-emerald-400"}`}>
-              {it.title}
-            </h3>
-
-            {it.team && (
-              <div className="mt-1 text-[0.9rem] font-semibold uppercase tracking-wide text-neutral-300">
-                {it.team}
-              </div>
-            )}
-
-            <div className="text-[0.95rem] italic text-neutral-300">
-              {it.company} – {it.location}
-            </div>
-
-            <p className="mt-3 max-w-[60ch] text-neutral-200">{it.blurb}</p>
-          </li>
-        ))}
-      </ol>
-    </section>
+<ul className="timeline timeline-vertical">
+  <li>
+    <div className="timeline-start">1984</div>
+    <div className="timeline-middle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        className="h-5 w-5"
+      >
+        <path
+          fillRule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+          clipRule="evenodd"
+        />
+      </svg>
+    </div>
+    <div className="timeline-end timeline-box">First Macintosh computer</div>
+    <hr />
+  </li>
+  <li>
+    <hr />
+    <div className="timeline-start">1998</div>
+    <div className="timeline-middle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        className="h-5 w-5"
+      >
+        <path
+          fillRule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+          clipRule="evenodd"
+        />
+      </svg>
+    </div>
+    <div className="timeline-end timeline-box">iMac</div>
+    <hr />
+  </li>
+  <li>
+    <hr />
+    <div className="timeline-start">2001</div>
+    <div className="timeline-middle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        className="h-5 w-5"
+      >
+        <path
+          fillRule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+          clipRule="evenodd"
+        />
+      </svg>
+    </div>
+    <div className="timeline-end timeline-box">iPod</div>
+    <hr />
+  </li>
+  <li>
+    <hr />
+    <div className="timeline-start">2007</div>
+    <div className="timeline-middle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        className="h-5 w-5"
+      >
+        <path
+          fillRule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+          clipRule="evenodd"
+        />
+      </svg>
+    </div>
+    <div className="timeline-end timeline-box">iPhone</div>
+    <hr />
+  </li>
+  <li>
+    <hr />
+    <div className="timeline-start">2015</div>
+    <div className="timeline-middle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        className="h-5 w-5"
+      >
+        <path
+          fillRule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+          clipRule="evenodd"
+        />
+      </svg>
+    </div>
+    <div className="timeline-end timeline-box">Apple Watch</div>
+  </li>
+</ul>
   );
 }

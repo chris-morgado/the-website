@@ -1,6 +1,5 @@
 import React from 'react';
 import MainNavBar from '../components/nav/navbars';
-import '../styles/globals.css';
 import NavItem from '../components/nav/navitem';
 import { ProjectScrollCard } from './projects/ProjectCards';
 import { projects } from './projects/Projects';
@@ -56,10 +55,8 @@ const Home: React.FC = () => {
                         <img src="images/me_in_the_wild2.png" style={{width:'100%', height:'100%'}}></img>
                     </div>
                 </div>
-
-                <div className='fade-on-load'>
-                    <ExperienceTimeline items={experienceItems} />
-                </div>
+                <button className="btn btn-primary m-4">DaisyUI?</button>
+                <ExperienceTimeline items={experienceItems} />
 
                 <div className="project-scroll fade-on-load">
                     <h1> Featured Projects: </h1>
