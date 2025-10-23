@@ -53,7 +53,6 @@ resource "aws_s3_bucket_policy" "public_read" {
 	depends_on = [aws_s3_bucket_public_access_block.site]
 }
 
-# Optional: create index.html + error.html directly from Terraform
 resource "aws_s3_object" "index_html" {
 	bucket       = aws_s3_bucket.site.id
 	key          = "index.html"
@@ -66,4 +65,19 @@ resource "aws_s3_object" "error_html" {
 	key          = "error.html"
 	content_type = "text/html"
 	content      = "<!doctype html><html><body><h1>Not found</h1></body></html>"
+}
+
+terraform {
+  required_version = ">= 1.5.0"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.17"       # or keep what you already use
+    }
+    cloudflare = {
+      source  = "cloudflare/cloudflare"
+      version = "~> 4.0"        # or pin a specific version if you want
+    }
+  }
 }
