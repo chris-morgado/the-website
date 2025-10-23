@@ -44,3 +44,24 @@ Thumbs.db
 coverage/
 *.lcov
 *.lcov.*
+
+# Terraform 
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*.tfvars
+*.tfvars.json
+
+# Terraform CLI cache
+.terraform/
+.terraform.lock.hcl
+
+# Plan files
+*.plan
+
+# AWS creds 
+.aws/
+credentials
+config
