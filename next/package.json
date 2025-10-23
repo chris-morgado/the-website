@@ -14,8 +14,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postinstall": "flowbite-react register"
+    "lint": "next lint"
   },
   "devDependencies": {
     "@types/node": "20.12.12",
