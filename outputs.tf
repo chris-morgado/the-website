@@ -1,6 +1,3 @@
-output "cloudfront_domain" { value = aws_cloudfront_distribution.site.domain_name }
-output "website_endpoint" {
-	value       = aws_s3_bucket_website_configuration.site.website_endpoint
-	description = "Open this URL in your browser"
-}
-output "bucket_name" { value = aws_s3_bucket.site.bucket }
+output "cloudfront_domain" { value = module.cloudfront.cloudfront_domain }
+output "website_endpoint"  { value = module.s3_website.website_endpoint }
+output "bucket_name"       { value = module.s3_website.bucket_name }

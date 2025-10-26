@@ -8,7 +8,6 @@ variable "bucket_name" {
 	default = "chrismorgados-the-website"
 }
 
-# Optional: upload a simple index.html via Terraform (set to "" to skip)
 variable "index_html_content" {
 	type    = string
 	default = "<!doctype html><html><head><meta charset='utf-8'><title>It works</title></head><body><h1>It works 🎉</h1></body></html>"
@@ -27,4 +26,8 @@ variable "cloudflare_zone_name"   {
 }
 variable "cloudflare_api_token"   { 
     type = string 
+}
+variable "cloudflare_zone_id" { 
+    type = string
+    default = "323449e26ea5be6bbdcddd84159e6882"
 }

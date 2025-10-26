@@ -1,83 +1,46 @@
-# Create the bucket
-resource "aws_s3_bucket" "site" {
-	bucket = var.bucket_name
+provider "aws" {
+  region = var.aws_region
 }
 
-# Required with modern S3: no ACLs; bucket-owner enforced
-resource "aws_s3_bucket_ownership_controls" "site" {
-	bucket = aws_s3_bucket.site.id
-	rule {
-		object_ownership = "BucketOwnerEnforced"
-	}
+provider "aws" {
+  alias  = "use1"
+  region = "us-east-1"
 }
 
-# Allow public policy to take effect (turn OFF the two policy blocks)
-resource "aws_s3_bucket_public_access_block" "site" {
-	bucket                  = aws_s3_bucket.site.id
-	block_public_acls       = true
-	ignore_public_acls      = true
-	block_public_policy     = false
-	restrict_public_buckets = false
-}
-
-# Enable static website hosting
-resource "aws_s3_bucket_website_configuration" "site" {
-	bucket = aws_s3_bucket.site.id
-	index_document {
-		suffix = "index.html"
-	}
-	error_document {
-		key = "error.html"
-	}
-}
-
-# Public read policy (website-style)
-data "aws_iam_policy_document" "public_read" {
-	statement {
-		sid     = "PublicReadGetObject"
-		effect  = "Allow"
-		actions = ["s3:GetObject"]
-		principals {
-			type        = "AWS"
-			identifiers = ["*"]
-		}
-		resources = ["${aws_s3_bucket.site.arn}/*"]
-	}
-}
-
-resource "aws_s3_bucket_policy" "public_read" {
-	bucket = aws_s3_bucket.site.id
-	policy = data.aws_iam_policy_document.public_read.json
-
-	# Ensure the Public Access Block is created first
-	depends_on = [aws_s3_bucket_public_access_block.site]
-}
-
-resource "aws_s3_object" "index_html" {
-	bucket       = aws_s3_bucket.site.id
-	key          = "index.html"
-	content_type = "text/html"
-	content      = var.index_html_content
-}
-
-resource "aws_s3_object" "error_html" {
-	bucket       = aws_s3_bucket.site.id
-	key          = "error.html"
-	content_type = "text/html"
-	content      = "<!doctype html><html><body><h1>Not found</h1></body></html>"
+provider "cloudflare" {
+  api_token = var.cloudflare_api_token
 }
 
 terraform {
-  required_version = ">= 1.5.0"
-
   required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 6.17"       # or keep what you already use
-    }
-    cloudflare = {
-      source  = "cloudflare/cloudflare"
-      version = "~> 4.0"        # or pin a specific version if you want
-    }
+    cloudflare = { source = "cloudflare/cloudflare" }
+    aws        = { source = "hashicorp/aws" }
   }
+}
+
+module "cloudfront" {
+  source = "./modules/cloudfront"
+  providers = {
+    aws      = aws
+    aws.use1 = aws.use1
+    cloudflare = cloudflare 
+  }
+  domain_root                 = var.domain_root
+  domain_www                  = var.domain_www
+  bucket_regional_domain_name = "${module.s3_website.bucket_name}.s3.${var.aws_region}.amazonaws.com"
+  cloudflare_zone_id = var.cloudflare_zone_id   
+}
+
+module "s3_website" {
+  source              = "./modules/s3-website"
+  bucket_name         = var.bucket_name
+  index_html_content  = var.index_html_content
+  cloudfront_distribution_arn = module.cloudfront.distribution_arn
+}
+
+module "dns" {
+  source = "./modules/dns"
+  providers = { cloudflare = cloudflare }
+  cloudflare_zone_id = var.cloudflare_zone_id   
+  cloudfront_domain  = module.cloudfront.cloudfront_domain
 }
