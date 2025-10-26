@@ -3,10 +3,6 @@ name: Terraform Plan
 on:
   pull_request:
     branches: [ main ]
-    paths:
-      - '**/*.tf'
-      - 'modules/**'
-      - '!next/**'   # ignored for tf only actions
 jobs:
   plan:
     runs-on: ubuntu-latest
