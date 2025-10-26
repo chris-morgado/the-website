@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source                = "hashicorp/aws"
       configuration_aliases = [aws.use1]
     }
     cloudflare = {
@@ -45,8 +45,8 @@ resource "cloudflare_dns_record" "acm_validation" {
 }
 
 resource "aws_acm_certificate_validation" "site" {
-  provider                = aws.use1
-  certificate_arn         = aws_acm_certificate.site.arn
+  provider        = aws.use1
+  certificate_arn = aws_acm_certificate.site.arn
 
   validation_record_fqdns = [
     for dvo in aws_acm_certificate.site.domain_validation_options :
@@ -96,7 +96,7 @@ output "cloudfront_domain" {
   value = aws_cloudfront_distribution.site.domain_name
 }
 
-output "distribution_arn" { 
+output "distribution_arn" {
   value = aws_cloudfront_distribution.site.arn
 }
 

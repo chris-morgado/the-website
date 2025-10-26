@@ -2,7 +2,7 @@ terraform {
   required_providers {
     cloudflare = {
       source  = "cloudflare/cloudflare"
-      version = "~> 5.0.0" 
+      version = "~> 5.0.0"
     }
   }
 }
@@ -12,7 +12,7 @@ resource "cloudflare_dns_record" "root" {
   zone_id = var.cloudflare_zone_id
   name    = "@"
   type    = "CNAME"
-  content = var.cloudfront_domain  
+  content = var.cloudfront_domain
   proxied = false
   ttl     = 1
 }
