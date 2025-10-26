@@ -3,10 +3,6 @@ name: Terraform Apply & Deploy Next.js
 on:
   push:
     branches: [ main ]
-    paths:
-      - '**/*.tf'
-      - 'modules/**'
-      - 'next/**'
 
 concurrency:
   group: terraform-prod
