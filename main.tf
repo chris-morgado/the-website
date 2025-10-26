@@ -16,6 +16,13 @@ terraform {
     cloudflare = { source = "cloudflare/cloudflare" }
     aws        = { source = "hashicorp/aws" }
   }
+  backend "s3" {
+    bucket         = "cms-the-website-backend"
+    key            = "the-website/prod/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "tf-locks"
+    encrypt        = true
+  }
 }
 
 module "cloudfront" {
