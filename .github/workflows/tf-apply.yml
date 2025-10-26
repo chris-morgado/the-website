@@ -84,6 +84,3 @@ jobs:
             --exclude "robots.txt" \
             --exclude "sitemap*.xml" \
             --cache-control "public,max-age=31536000,immutable"
-
-      - name: Invalidate CloudFront
-        run: aws cloudfront create-invalidation --distribution-id $CF_DISTRIBUTION_ID --paths "/*"
