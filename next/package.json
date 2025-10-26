@@ -11,11 +11,10 @@
     "three": "^0.164.1"
   },
   "scripts": {
-    "dev": "next dev",                       
-    "build": "next build",                   
-    "export": "next export",                 
-    "build:static": "npm run build && npm run export",
-    "start": "next start",                   
+    "dev": "next dev",
+    "build": "next build",
+    "build:static": "next build", 
+    "start": "next start",
     "lint": "next lint"
   },
   "devDependencies": {

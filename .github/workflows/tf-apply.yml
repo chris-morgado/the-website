@@ -66,7 +66,7 @@ jobs:
 
       - name: Build static export
         working-directory: next
-        run: npm run build:static   # does this: npm run build && npm run export
+        run: npm run build:static   
 
       - name: Sync HTML (no-store)
         run: |
