@@ -43,14 +43,6 @@ resource "aws_s3_bucket_website_configuration" "site" {
   error_document { key = "error.html" }
 }
 
-# Optional: upload test file
-resource "aws_s3_object" "index_html" {
-  bucket       = aws_s3_bucket.site.id
-  key          = "index.html"
-  content_type = "text/html"
-  content      = var.index_html_content
-}
-
 output "bucket_name" {
   value = aws_s3_bucket.site.bucket
 }
