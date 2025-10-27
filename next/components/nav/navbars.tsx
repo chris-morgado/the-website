@@ -9,8 +9,10 @@ type NavItemData = {
 
 const MainNavBar: React.FC = () => {
     const navData: NavItemData[] = [
-        { name: "Projects", link: "/projects" },
-        { name: "Contact", link: "/contact" },
+        { name: "Experience", link: "/" },
+        { name: "Projects", link: "/" },
+        { name: "Extracurriculars", link: "/" },
+        { name: "Contact", link: "/" },
         { name: "Terminal", link: "/terminal" }
     ];
 
