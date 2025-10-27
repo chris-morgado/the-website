@@ -10,6 +10,29 @@ terraform {
   }
 }
 
+resource "aws_cloudfront_function" "dir_index" {
+  name    = "append-index-html"
+  runtime = "cloudfront-js-1.0"
+  publish = true
+  comment = "Rewrite URLs like /foo -> /foo/index.html"
+  code = <<-EOF
+function handler(event) {
+  var req = event.request;
+  var uri = req.uri;
+
+  // If the URI has no file extension, serve index.html
+  if (!uri.includes('.')) {
+    if (uri.endsWith('/')) {
+      req.uri += 'index.html';
+    } else {
+      req.uri += '/index.html';
+    }
+  }
+  return req;
+}
+EOF
+}
+
 resource "aws_cloudfront_origin_access_control" "oac" {
   name                              = "site-oac"
   origin_access_control_origin_type = "s3"
@@ -77,8 +100,23 @@ resource "aws_cloudfront_distribution" "site" {
       query_string = false
       cookies { forward = "none" }
     }
+
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.dir_index.arn
+    }
   }
 
+  custom_error_response {
+    error_code         = 403
+    response_code      = 404
+    response_page_path = "/404.html"
+  }
+  custom_error_response {
+    error_code         = 404
+    response_code      = 404
+    response_page_path = "/404.html"
+  }
   restrictions {
     geo_restriction { restriction_type = "none" }
   }
