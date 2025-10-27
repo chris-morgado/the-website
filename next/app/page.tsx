@@ -6,24 +6,24 @@ import { ExperienceTimeline } from '../components/experience/ExperienceTimeline'
 
 
 const experienceItems = [
-  {
-    date: "May 2025",
-    title: "Intern",
+    {
+    date: "March 2025",
+    title: "SWE Intern",
     team: "Team",
     company: "Honda",
-    location: "Queens, NY",
+    location: "Marysville, Ohio",
     blurb:
       "Blah blah blah",
     accent: "text-emerald-400",
   },
   {
-    date: "March 2025",
-    title: "SWE Intern",
+    date: "Dec. 2022 - May 2024",
+    title: "Supplemental Instruction Leader",
     team: "Team",
-    company: "Honda",
-    location: "Brooklyn, NY",
+    company: "Academic Success Center, Rochester Institute of Technology",
+    location: "Rochester, NY",
     blurb:
-      "Blah blah blah",
+      "Facilitated 2 weekly study sessions for a two-course Python & Java programming sequence that delves into computational problem solving, covering data structures and algorithms.\nEffectively coordinated additional monthly bonus sessions that garnered 3x the attendance compared to standard sessions.",
     accent: "text-emerald-400",
   },
 ]

@@ -40,6 +40,17 @@ html, body {
     height: 100%;
 }
 
+/* Fixing timeline spacing */
+.timeline > li {
+	grid-template-columns: 0 1fr 3fr !important;
+}
+.timeline > li .timeline-start {
+	display: none !important;
+}
+.timeline-vertical > li {
+	grid-template-columns: 0 max-content 1fr !important;
+}
+
 .homepage {
     height: 100%;
 }
