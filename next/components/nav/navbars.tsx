@@ -9,13 +9,15 @@ type NavItemData = {
 
 const MainNavBar: React.FC = () => {
     const navData: NavItemData[] = [
-        { name: "Projects", link: "/projects" },
-        { name: "Contact", link: "/contact" },
+        { name: "Experience", link: "/" },
+        { name: "Projects", link: "/" },
+        { name: "Extracurriculars", link: "/" },
+        { name: "Contact", link: "/" },
         { name: "Terminal", link: "/terminal" }
     ];
 
     return (
-        <div className="navbar shadow-sm px-24">
+        <div className="navbar shadow-sm px-8 sm:px-4 xs:px-2">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
