@@ -40,7 +40,7 @@ const Home: React.FC = () => {
                 font-bold
                 text-[clamp(2.75rem,6vw,4.5rem)]
                 leading-tight">
-                Chris Morgado
+                Ella Natter
               </h1>
               <h3 className="
                 mt-2
