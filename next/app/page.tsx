@@ -33,7 +33,7 @@ const Home: React.FC = () => {
         <div className="homepage">
             <MainNavBar />
             <div className="inner-homepage">
-                <div className="about-section fade-on-load">
+                <div className="about-section fade-on-load px-50 sm:px-40 xs:px-2">
                     <div className="header">
                         <h1>
                             Chris Morgado
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
                         </div>
                     </div>
                     <div style={{flex: '1'}}></div>
-                    <div className="picture">
+                    <div className="picture hidden lg:block">
                         <img src="images/me_in_the_wild2.png" style={{width:'100%', height:'100%'}}></img>
                     </div>
                 </div>
