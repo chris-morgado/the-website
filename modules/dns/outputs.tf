@@ -1,0 +1,1 @@
+output "root_record_id" { value = cloudflare_dns_record.root.id }

@@ -36,7 +36,7 @@ const Home: React.FC = () => {
                 <div className="about-section fade-on-load">
                     <div className="header">
                         <h1>
-                            Clara Hardison
+                            Chris Morgado
                         </h1>
                         <h3>
                             Welcome to my site!
