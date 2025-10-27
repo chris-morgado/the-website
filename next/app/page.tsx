@@ -1,10 +1,7 @@
 import React from 'react';
 import MainNavBar from '../components/nav/navbars';
-import NavItem from '../components/nav/navitem';
 import { ProjectScrollCard } from './projects/ProjectCards';
 import { projects } from './projects/Projects';
-import { GitHubLink } from '../components/common/GithubContact';
-import { LinkedInLink } from '../components/common/LinkedInContact';
 import { ExperienceTimeline } from '../components/experience/ExperienceTimeline';
 
 
