@@ -1,10 +1,7 @@
 import React from 'react';
 import MainNavBar from '../components/nav/navbars';
-import NavItem from '../components/nav/navitem';
 import { ProjectScrollCard } from './projects/ProjectCards';
 import { projects } from './projects/Projects';
-import { GitHubLink } from '../components/common/GithubContact';
-import { LinkedInLink } from '../components/common/LinkedInContact';
 import { ExperienceTimeline } from '../components/experience/ExperienceTimeline';
 
 
@@ -39,7 +36,7 @@ const Home: React.FC = () => {
                 <div className="about-section fade-on-load">
                     <div className="header">
                         <h1>
-                            Clara Hardison
+                            Chris Morgado
                         </h1>
                         <h3>
                             Welcome to my site!
