@@ -26,5 +26,3 @@ resource "cloudflare_dns_record" "www_cname" {
   proxied = false
   ttl     = 1
 }
-
-output "root_record_id" { value = cloudflare_dns_record.root.id }
