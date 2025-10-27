@@ -25,36 +25,36 @@ function TimelineCard({ item }: { item: ExperienceItem }) {
 				className="absolute left-0 top-0 h-full w-1 rounded-l-2xl"
 				style={{ background: item.accent || "oklch(var(--p))" }}
 			/>
-			<div className="rounded-2xl border border-base-300 bg-base-200/30 backdrop-blur p-4 sm:p-6 pl-6 shadow-lg hover:shadow-xl transition-shadow">
-				<header className="flex flex-wrap items-start justify-between gap-3">
+      <div className="rounded-2xl border border-base-300 bg-base-200/30 backdrop-blur p-4 sm:p-6 pl-6 shadow-lg hover:shadow-xl transition-shadow text-[clamp(0.8rem,1.1vw+0.35rem,1rem)]">
+        <header className="flex flex-wrap items-start justify-between gap-3">
 					<div className="min-w-0">
-						<h3 className="text-lg sm:text-xl font-semibold leading-tight truncate">
-							{item.title}
-						</h3>
-						{item.team ? (
-							<p className="mt-0.5 text-sm opacity-80 truncate">{item.team}</p>
-						) : null}
+            <h3 className="font-semibold leading-tight truncate text-[1.6em]">
+              {item.title}
+            </h3>
+            {item.team ? (
+              <p className="mt-0.5 opacity-80 truncate text-[0.95em]">{item.team}</p>
+            ) : null}
 					</div>
 				</header>
 
-				<div className="mt-1 text-sm italic opacity-90">
-					{item.company} <span className="opacity-60">–</span> {item.location}
-				</div>
+        <div className="mt-1 italic opacity-90 text-[0.95em]">
+          {item.company} <span className="opacity-60">–</span> {item.location}
+        </div>
 
 				{blurbLines.length > 1 ? (
-					<ul className="mt-3 list-disc list-outside pl-5 text-sm leading-relaxed text-base-content/90">
+          <ul className="mt-3 list-disc list-outside pl-5 leading-relaxed text-base-content/90 text-[1em]">
 						{blurbLines.map((line, i) => (
 							<li key={i}>{line}</li>
 						))}
 					</ul>
 				) : (
-					<p className="mt-3 text-sm leading-relaxed text-base-content/90">
+          <p className="mt-3 leading-relaxed text-base-content/90 text-[1em]">
 						{blurbLines[0] || ""}
 					</p>
 				)}
 
 				{item.tags && item.tags.length > 0 ? (
-					<div className="mt-4 flex flex-wrap gap-2">
+          <div className="mt-4 flex flex-wrap gap-2">
 						{item.tags.map((t, i) => (
 							<span key={i} className="badge badge-sm">
 								{t}
