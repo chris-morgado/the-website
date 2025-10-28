@@ -202,7 +202,7 @@ html, body {
     width: 60%;
     margin-bottom: 50px;
 }
-.header > h1 {
+h1 {
     font-weight: 700;
     /* font-size: 3.2em; */
     margin-top: 25px;

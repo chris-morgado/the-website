@@ -6,12 +6,32 @@ import { ExperienceTimeline } from '../components/experience/ExperienceTimeline'
 
 
 const experienceItems = [
-    {
-    date: "March 2025",
-    title: "SWE Intern",
-    team: "Team",
-    company: "Honda",
-    location: "Marysville, Ohio",
+  {
+    date: "May. 2025 - Aug. 2025",
+    title: "Software Engineering Intern",
+    team: "In-Vehicle Infotainment (IVI) Design Group",
+    company: "Honda Development and Manufacturing of America",
+    location: "Marysville, OH",
+    blurb:
+      "Blah blah blah",
+    accent: "text-emerald-400",
+  },
+  {
+    date: "Dec. 2024 - May. 2025",
+    title: "Supplemental Instruction Program Assistant",
+    team: "",
+    company: "Academic Success Center, RIT",
+    location: "Rochester, NY",
+    blurb:
+      "Coordinating administrative operations such as schedules, logistics, and training for 50+ SI Leaders in the SI program.\nLeading weekly training, reviewing SI session plans, and acting as a mentor figure for current SI Leaders.",
+    accent: "text-emerald-400",
+  },
+  {
+    date: "Aug. 2024 - Dec. 2024",
+    title: "Software Engineering Intern",
+    team: "In-Vehicle Infotainment (IVI) Testing Group",
+    company: "Honda Development and Manufacturing of America",
+    location: "Marysville, OH",
     blurb:
       "Blah blah blah",
     accent: "text-emerald-400",
@@ -19,8 +39,8 @@ const experienceItems = [
   {
     date: "Dec. 2022 - May 2024",
     title: "Supplemental Instruction Leader",
-    team: "Team",
-    company: "Academic Success Center, Rochester Institute of Technology",
+    team: "",
+    company: "Academic Success Center, RIT",
     location: "Rochester, NY",
     blurb:
       "Facilitated 2 weekly study sessions for a two-course Python & Java programming sequence that delves into computational problem solving, covering data structures and algorithms.\nEffectively coordinated additional monthly bonus sessions that garnered 3x the attendance compared to standard sessions.",
@@ -40,7 +60,7 @@ const Home: React.FC = () => {
                 font-bold
                 text-[clamp(2.75rem,6vw,4.5rem)]
                 leading-tight">
-                Ella Natter
+                Chris Morgado
               </h1>
               <h3 className="
                 mt-2
@@ -70,12 +90,16 @@ const Home: React.FC = () => {
             <img src="images/me_in_the_wild2.png" style={{ width: '100%', height: '100%' }}></img>
           </div>
         </div>
-        <button className="btn btn-primary m-4">DaisyUI?</button>
+        <h1 className="font-bold text-[clamp(1.95rem,6vw,3.5rem)] leading-tight">
+          Experience
+        </h1>
         <ExperienceTimeline items={experienceItems} />
 
         <div className="project-scroll fade-on-load">
-          <h1> Featured Projects: </h1>
-          <div className="project-scroll-container">
+            <h1 className="font-bold text-[clamp(1.95rem,6vw,3.5rem)] leading-tight">
+              Projects
+            </h1>          
+            <div className="project-scroll-container">
             <ProjectScrollCard project={projects[8]}></ProjectScrollCard>
             <ProjectScrollCard project={projects[4]}></ProjectScrollCard>
             <ProjectScrollCard project={projects[3]}></ProjectScrollCard>
