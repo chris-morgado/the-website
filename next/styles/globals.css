@@ -47,6 +47,7 @@ html, body {
 .timeline > li .timeline-start {
 	display: none !important;
 }
+
 .timeline-vertical > li {
 	grid-template-columns: 0 max-content 1fr !important;
 }
