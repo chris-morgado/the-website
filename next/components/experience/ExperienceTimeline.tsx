@@ -58,7 +58,7 @@ function TimelineCard({ item }: { item: ExperienceItem }) {
 
 				{/* Company — spacer — Location */}
 				<div className="mt-1 italic text-[clamp(.6rem,1.25vw,.95rem)] flex items-baseline gap-2">
-					<span className="text-neutral-300">{item.company}</span>
+					<span className="font-bold text-neutral-300">{item.company}</span>
 					<span className="flex-1" aria-hidden="true" />
 					<span className="text-neutral-500">{item.location}</span>
 				</div>

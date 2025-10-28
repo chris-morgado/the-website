@@ -24,7 +24,7 @@ export function ClearPill({
                 cursor-pointer select-none
                 border border-white/10
                 text-white
-                text-[clamp(0.9rem,0.3vw+0.85rem,1rem)]
+                text-[clamp(0.7rem,1.5vw,1rem)]
                 transition
                 bg-[linear-gradient(180deg,#1a1a1a_0%,#101010_100%)]
                 shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_6px_16px_rgba(0,0,0,0.35)]

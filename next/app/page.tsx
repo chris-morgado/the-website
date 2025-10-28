@@ -10,7 +10,7 @@ const experienceItems = [
     date: "May 2025 - Aug. 2025",
     title: "Software Engineering Intern",
     team: "In-Vehicle Infotainment (IVI) Design Group",
-    company: "Honda Development and Manufacturing of America",
+    company: "American Honda Motor Company",
     location: "Marysville, OH",
     blurb:
       "Blah blah blah",
@@ -30,7 +30,7 @@ const experienceItems = [
     date: "Aug. 2024 - Dec. 2024",
     title: "Software Engineering Intern",
     team: "In-Vehicle Infotainment (IVI) Testing Group",
-    company: "Honda Development and Manufacturing of America",
+    company: "American Honda Motor Company",
     location: "Marysville, OH",
     blurb:
       "Blah blah blah",
