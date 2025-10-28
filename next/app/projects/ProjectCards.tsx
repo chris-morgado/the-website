@@ -26,7 +26,7 @@ export const ProjectScrollCard: React.FC<ProjectCardProps> = ({project}) => {
     const newSlug = "projects/"+project.slug;
 
     return (
-      <Link href={newSlug} className="project-scroll-card">
+      <Link href={newSlug} className="project-scroll-card w-full">
         <div>
           <h2>{project.title}</h2>
           <p>

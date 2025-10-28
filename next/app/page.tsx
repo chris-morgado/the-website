@@ -104,14 +104,16 @@ const Home: React.FC = () => {
         </h1>
         <ExperienceTimeline items={experienceItems} />
 
+        {/* Projects */}
         <div className="project-scroll fade-on-load">
           <h1 className="font-bold text-[clamp(1.95rem,6vw,3.5rem)] leading-tight">
             Projects
           </h1>
-          <div className="project-scroll-container">
-            <ProjectScrollCard project={projects[8]}></ProjectScrollCard>
-            <ProjectScrollCard project={projects[4]}></ProjectScrollCard>
-            <ProjectScrollCard project={projects[3]}></ProjectScrollCard>
+
+          <div className="mt-4 mx-4 grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr max-w-7xl mx-auto px-4">
+            <ProjectScrollCard project={projects[8]} ></ProjectScrollCard>
+            <ProjectScrollCard project={projects[4]} ></ProjectScrollCard>
+            <ProjectScrollCard project={projects[3]} ></ProjectScrollCard>
           </div>
         </div>
       </div>

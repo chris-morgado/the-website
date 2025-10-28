@@ -283,9 +283,6 @@ h1 {
     background: linear-gradient(rgb(245, 245, 245), rgb(196, 196, 196));
     border-radius: 8px;
     padding: 20px;
-    margin: 10px;
-    height: 100%;
-    width: 30%;
     transition: transform .5s;
     text-decoration: none;
     color: black;
