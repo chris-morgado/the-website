@@ -23,9 +23,11 @@ const MainNavBar: React.FC = () => {
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                     </div>
-                    <ul className="menu menu-sm dropdown-content bg-gray-900 text-lg rounded-box z-1 mt-3 w-52 p-2 shadow">
+                    <ul className="menu menu-sm dropdown-content 
+                        bg-gradient-to-b from-[#121212] to-[#0a0a0a]
+                        text-lg rounded-box z-1 mt-3 w-52 p-2 shadow">
                         {navData.map((item, index) => (
-                            <li key={index}><a>{item.name}</a></li>
+                            <li key={index} className='rounded-box hover:shadow-[0_0_0_1px_rgba(16,185,129,0.35),0_0_24px_4px_rgba(16,185,129,0.25)]'><a>{item.name}</a></li>
                         ))}
                     </ul>
                 </div>

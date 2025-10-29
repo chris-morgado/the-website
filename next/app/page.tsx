@@ -1,7 +1,6 @@
 import React from 'react';
 import MainNavBar from '../components/nav/navbars';
-import { ProjectScrollCard } from './projects/ProjectCards';
-import { projects } from './projects/Projects';
+import { ProjectScrollCard } from '../components/experience/ProjectCard';
 import { ExperienceTimeline } from '../components/experience/ExperienceTimeline';
 import { ClearPill } from '../components/ui/ClearPill';
 
@@ -10,7 +9,7 @@ const experienceItems = [
     date: "May 2025 - Aug. 2025",
     title: "Software Engineering Intern",
     team: "In-Vehicle Infotainment (IVI) Design Group",
-    company: "Honda Development and Manufacturing of America",
+    company: "American Honda Motor Company",
     location: "Marysville, OH",
     blurb:
       "Blah blah blah",
@@ -30,7 +29,7 @@ const experienceItems = [
     date: "Aug. 2024 - Dec. 2024",
     title: "Software Engineering Intern",
     team: "In-Vehicle Infotainment (IVI) Testing Group",
-    company: "Honda Development and Manufacturing of America",
+    company: "American Honda Motor Company",
     location: "Marysville, OH",
     blurb:
       "Blah blah blah",
@@ -44,6 +43,30 @@ const experienceItems = [
     location: "Rochester, NY",
     blurb:
       "Facilitated 2 weekly study sessions for a two-course Python & Java programming sequence that delves into computational problem solving, covering data structures and algorithms.\nEffectively coordinated additional monthly bonus sessions that garnered 3x the attendance compared to standard sessions.",
+    accent: "text-emerald-400",
+  },
+]
+
+const projectItems = [
+  {
+    title: "DegreeMap",
+    blurb: "Blah blah blah",
+    tags: ["React", "TypeScript", "Next.js"],
+    accent: "text-emerald-400",
+  },
+  {
+    title: "Irrig (Smart Irrigation System)",
+    blurb: "Blah blah blah",
+    image: "/images/IrrigScreen.png",
+    tags: ["C++", "ESP32", "Arduino Language", "PlatformIO"],
+    links: [{ label: "GitHub", href: "https://github.com/fkhan224/Irrig"}, { label: "Project Website", href: ""}],
+    accent: "text-emerald-400",
+  },
+  {
+    title: "SSE Website Rebuild",
+    blurb: "Blah blah blah",
+    image: "/images/SseRebuild.png",
+    tags: ["Next.js", "TypeScript", "TailwindCSS", "Figma"],
     accent: "text-emerald-400",
   },
 ]
@@ -104,14 +127,16 @@ const Home: React.FC = () => {
         </h1>
         <ExperienceTimeline items={experienceItems} />
 
+        {/* Projects */}
         <div className="project-scroll fade-on-load">
           <h1 className="font-bold text-[clamp(1.95rem,6vw,3.5rem)] leading-tight">
             Projects
           </h1>
-          <div className="project-scroll-container">
-            <ProjectScrollCard project={projects[8]}></ProjectScrollCard>
-            <ProjectScrollCard project={projects[4]}></ProjectScrollCard>
-            <ProjectScrollCard project={projects[3]}></ProjectScrollCard>
+
+          <div className="mt-4 mx-4 grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto px-4">
+            <ProjectScrollCard project={projectItems[0]} ></ProjectScrollCard>
+            <ProjectScrollCard project={projectItems[1]} ></ProjectScrollCard>
+            <ProjectScrollCard project={projectItems[2]} ></ProjectScrollCard>
           </div>
         </div>
       </div>
