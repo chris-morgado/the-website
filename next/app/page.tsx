@@ -1,6 +1,6 @@
 import React from 'react';
 import MainNavBar from '../components/nav/navbars';
-import { ProjectScrollCard } from './projects/ProjectCards';
+import { ProjectScrollCard } from '../components/experience/ProjectCard';
 import { projects } from './projects/Projects';
 import { ExperienceTimeline } from '../components/experience/ExperienceTimeline';
 import { ClearPill } from '../components/ui/ClearPill';
@@ -44,6 +44,27 @@ const experienceItems = [
     location: "Rochester, NY",
     blurb:
       "Facilitated 2 weekly study sessions for a two-course Python & Java programming sequence that delves into computational problem solving, covering data structures and algorithms.\nEffectively coordinated additional monthly bonus sessions that garnered 3x the attendance compared to standard sessions.",
+    accent: "text-emerald-400",
+  },
+]
+
+const projectItems = [
+  {
+    title: "DegreeMap",
+    blurb: "Blah blah blah",
+    tags: ["React", "TypeScript", "Next.js"],
+    accent: "text-emerald-400",
+  },
+  {
+    title: "Irrig",
+    blurb: "Blah blah blah",
+    tags: ["React", "TypeScript", "Next.js"],
+    accent: "text-emerald-400",
+  },
+  {
+    title: "SSE Website Rebuild",
+    blurb: "Blah blah blah",
+    tags: ["React", "TypeScript", "Next.js"],
     accent: "text-emerald-400",
   },
 ]
@@ -111,9 +132,9 @@ const Home: React.FC = () => {
           </h1>
 
           <div className="mt-4 mx-4 grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr max-w-7xl mx-auto px-4">
-            <ProjectScrollCard project={projects[8]} ></ProjectScrollCard>
-            <ProjectScrollCard project={projects[4]} ></ProjectScrollCard>
-            <ProjectScrollCard project={projects[3]} ></ProjectScrollCard>
+            <ProjectScrollCard project={projectItems[0]} ></ProjectScrollCard>
+            <ProjectScrollCard project={projectItems[1]} ></ProjectScrollCard>
+            <ProjectScrollCard project={projectItems[2]} ></ProjectScrollCard>
           </div>
         </div>
       </div>
