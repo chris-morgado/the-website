@@ -1,7 +1,6 @@
 import React from 'react';
 import MainNavBar from '../components/nav/navbars';
 import { ProjectScrollCard } from '../components/experience/ProjectCard';
-import { projects } from './projects/Projects';
 import { ExperienceTimeline } from '../components/experience/ExperienceTimeline';
 import { ClearPill } from '../components/ui/ClearPill';
 
@@ -56,15 +55,17 @@ const projectItems = [
     accent: "text-emerald-400",
   },
   {
-    title: "Irrig",
+    title: "Irrig (Smart Irrigation System)",
     blurb: "Blah blah blah",
-    tags: ["React", "TypeScript", "Next.js"],
+    image: "/images/IrrigScreen.png",
+    tags: ["C++", "ESP32", "Arduino Language", "PlatformIO"],
     accent: "text-emerald-400",
   },
   {
     title: "SSE Website Rebuild",
     blurb: "Blah blah blah",
-    tags: ["React", "TypeScript", "Next.js"],
+    image: "/images/SseRebuild.png",
+    tags: ["Next.js", "TypeScript", "TailwindCSS", "Figma"],
     accent: "text-emerald-400",
   },
 ]
