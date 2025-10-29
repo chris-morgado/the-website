@@ -59,6 +59,7 @@ const projectItems = [
     blurb: "Blah blah blah",
     image: "/images/IrrigScreen.png",
     tags: ["C++", "ESP32", "Arduino Language", "PlatformIO"],
+    links: [{ label: "GitHub", href: "https://github.com/fkhan224/Irrig"}, { label: "Project Website", href: ""}],
     accent: "text-emerald-400",
   },
   {
@@ -132,7 +133,7 @@ const Home: React.FC = () => {
             Projects
           </h1>
 
-          <div className="mt-4 mx-4 grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr max-w-7xl mx-auto px-4">
+          <div className="mt-4 mx-4 grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto px-4">
             <ProjectScrollCard project={projectItems[0]} ></ProjectScrollCard>
             <ProjectScrollCard project={projectItems[1]} ></ProjectScrollCard>
             <ProjectScrollCard project={projectItems[2]} ></ProjectScrollCard>

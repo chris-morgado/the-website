@@ -9,6 +9,7 @@ export type ProjectItem = {
   blurb: string;
   image?: string;
   tags?: string[];
+  links?: { label: string; href: string }[];
   accent?: string;
 };
 
@@ -140,6 +141,31 @@ export function ProjectScrollCard({ project }: {project: ProjectItem}) {
             </div>
           ) : null}
           <p className="py-4">{project.blurb}</p>
+
+          <div className="flex flex-wrap items-center gap-2">
+            <p className=""><b>Links:</b></p>  
+            {project.links?.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="        
+        inline-flex items-center gap-1
+        rounded-full
+        bg-gradient-to-b from-[#292929] to-[#0D0D0D]
+        px-3 py-1.5
+        text-xs font-medium text-emerald-300
+        border border-white/10
+        shadow-sm
+        hover:from-[#444444] hover:to-[#222222]
+        hover:text-emerald-300
+        transition"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
       </dialog>
     </div>
