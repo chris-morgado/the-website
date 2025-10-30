@@ -5,6 +5,17 @@ import { ExperienceTimeline } from '../components/experience/ExperienceTimeline'
 import { ClearPill } from '../components/ui/ClearPill';
 
 const experienceItems = [
+    {
+    date: "Aug. 2025 - Current",
+    title: "Supplemental Instruction Program Assistant",
+    team: "",
+    company: "Academic Success Center, RIT",
+    location: "Rochester, NY",
+    blurb:
+      "Currently continuing my role as a Program Assistant during a period of rapid growth, supporting coordination and training for an expanded group of 50+ SI Leaders.\nRevamping data organization to make processes more efficient and support program growth.",
+    accent: "text-emerald-400",
+    tags: ["Python", "Google Apps Script"]    
+  },
   {
     date: "May 2025 - Aug. 2025",
     title: "Software Engineering Intern",
@@ -12,8 +23,9 @@ const experienceItems = [
     company: "American Honda Motor Company",
     location: "Marysville, OH",
     blurb:
-      "Blah blah blah",
+      "Spearheaded the design and development of a multi-tool Android app from the ground up to facilitate structured data collection, now currently being used across multiple departments and is currently in the process of being patented. \nInvolved in the modernization of data storage by migrating from Excel to a PostgreSQL backend integrated with Jira, reducing manual data input by 90%. \nOptimized data acquisition methods for 3 test procedures, increasing test coverage and improving data reliability",
     accent: "text-emerald-400",
+    tags: ["C++", "Kotlin", "Android Development", "PostgreSQL", "Jira", "Excel"]
   },
   {
     date: "Dec. 2024 - May 2025",
@@ -22,7 +34,7 @@ const experienceItems = [
     company: "Academic Success Center, RIT",
     location: "Rochester, NY",
     blurb:
-      "Coordinating administrative operations such as schedules, logistics, and training for 50+ SI Leaders in the SI program.\nLeading weekly training, reviewing SI session plans, and acting as a mentor figure for current SI Leaders.",
+      "Coordinated administrative operations such as schedules, logistics, and training for 30+ SI Leaders in the SI program.\nLed weekly training, reviewed SI session plans, and acted as a mentor figure for current SI Leaders.",
     accent: "text-emerald-400",
   },
   {
@@ -32,8 +44,9 @@ const experienceItems = [
     company: "American Honda Motor Company",
     location: "Marysville, OH",
     blurb:
-      "Blah blah blah",
+      "Implemented a video stitching program using OpenCV-Python and a PyQt frontend to combine multiple test drive recordings into a single video with customizable layouts, eliminating costly third-party solutions.\nBuilt a Wi-Fi-based protocol layer to interface the app with in-house tools (e.g., CAN loggers, dark current monitors), enabling remote setup and data acquisition, significantly reducing test time for multiple procedures.",
     accent: "text-emerald-400",
+    tags: ["C++", "Kotlin", "Android Development", "Python", "PyQt", "OpenCV"]
   },
   {
     date: "Dec. 2022 - May 2024",
@@ -44,6 +57,7 @@ const experienceItems = [
     blurb:
       "Facilitated 2 weekly study sessions for a two-course Python & Java programming sequence that delves into computational problem solving, covering data structures and algorithms.\nEffectively coordinated additional monthly bonus sessions that garnered 3x the attendance compared to standard sessions.",
     accent: "text-emerald-400",
+    tags: ["Python", "Java"]
   },
 ]
 
@@ -75,7 +89,7 @@ const Home: React.FC = () => {
   return (
     <div className="homepage">
       <MainNavBar />
-      <div className="inner-homepage">
+      <div id="home" className="inner-homepage">
         <div className="about-section fade-on-load px-50 max-[700px]:px-4">
           <div className="header">
             {/* CLAMP (smoothly changes font size): clamp(min, preferred, max) */}
@@ -111,7 +125,7 @@ const Home: React.FC = () => {
               </ClearPill>
 
               <ClearPill
-                href="/resume.pdf"
+                href="/images/ChrisMorgadoResume.pdf"
               >
                 View Resume
               </ClearPill>
@@ -122,14 +136,14 @@ const Home: React.FC = () => {
             <img src="images/me_in_the_wild2.png" style={{ width: '100%', height: '100%' }}></img>
           </div>
         </div>
-        <h1 className="font-bold text-[clamp(1.95rem,6vw,3.5rem)] leading-tight">
+        <h1 id="experience" className="font-bold text-[clamp(1.95rem,6vw,3.5rem)] leading-tight">
           Experience
         </h1>
         <ExperienceTimeline items={experienceItems} />
 
         {/* Projects */}
         <div className="project-scroll fade-on-load">
-          <h1 className="font-bold text-[clamp(1.95rem,6vw,3.5rem)] leading-tight">
+          <h1 id="projects" className="font-bold text-[clamp(1.95rem,6vw,3.5rem)] leading-tight">
             Projects
           </h1>
 

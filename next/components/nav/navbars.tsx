@@ -9,11 +9,11 @@ type NavItemData = {
 
 const MainNavBar: React.FC = () => {
     const navData: NavItemData[] = [
-        { name: "Experience", link: "/" },
-        { name: "Projects", link: "/" },
-        { name: "Extracurriculars", link: "/" },
-        { name: "Contact", link: "/" },
-        { name: "Terminal", link: "/terminal" }
+        { name: "Experience",       link: "#experience" },
+        { name: "Projects",         link: "#projects" },
+        { name: "Extracurriculars", link: "#extracurriculars" }, 
+        { name: "Contact",          link: "#contact" },          
+        { name: "Terminal",         link: "/terminal" }
     ];
 
     return (
@@ -27,7 +27,7 @@ const MainNavBar: React.FC = () => {
                         bg-gradient-to-b from-[#121212] to-[#0a0a0a]
                         text-lg rounded-box z-1 mt-3 w-52 p-2 shadow">
                         {navData.map((item, index) => (
-                            <li key={index} className='rounded-box hover:shadow-[0_0_0_1px_rgba(16,185,129,0.35),0_0_24px_4px_rgba(16,185,129,0.25)]'><a>{item.name}</a></li>
+                            <li key={index} className='rounded-box hover:shadow-[0_0_0_1px_rgba(16,185,129,0.35),0_0_24px_4px_rgba(16,185,129,0.25)]'><a href={item.link}>{item.name}</a></li>
                         ))}
                     </ul>
                 </div>
@@ -35,7 +35,7 @@ const MainNavBar: React.FC = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal text-lg px-1">
                     {navData.map((item, index) => (
-                        <li key={index}><a>{item.name}</a></li>
+                        <li key={index}><a href={item.link}>{item.name}</a></li>
                     ))}
                 </ul>
             </div>
