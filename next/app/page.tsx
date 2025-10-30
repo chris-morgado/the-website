@@ -3,8 +3,20 @@ import MainNavBar from '../components/nav/navbars';
 import { ProjectScrollCard } from '../components/experience/ProjectCard';
 import { ExperienceTimeline } from '../components/experience/ExperienceTimeline';
 import { ClearPill } from '../components/ui/ClearPill';
+import { link } from 'fs';
 
 const experienceItems = [
+    {
+    date: "Aug. 2025 - Current",
+    title: "Supplemental Instruction Program Assistant",
+    team: "",
+    company: "Academic Success Center, RIT",
+    location: "Rochester, NY",
+    blurb:
+      "Currently continuing my role as a Program Assistant during a period of rapid growth, supporting coordination and training for an expanded group of 50+ SI Leaders.\nRevamping data organization to make processes more efficient and support program growth.",
+    accent: "text-emerald-400",
+    tags: ["Python", "Google Apps Script"]    
+  },
   {
     date: "May 2025 - Aug. 2025",
     title: "Software Engineering Intern",
@@ -12,8 +24,9 @@ const experienceItems = [
     company: "American Honda Motor Company",
     location: "Marysville, OH",
     blurb:
-      "Blah blah blah",
+      "Spearheaded the design and development of a multi-tool Android app from the ground up to facilitate structured data collection, now currently being used across multiple departments and is currently in the process of being patented. \nInvolved in the modernization of data storage by migrating from Excel to a PostgreSQL backend integrated with Jira, reducing manual data input by 90%. \nOptimized data acquisition methods for 3 test procedures, increasing test coverage and improving data reliability",
     accent: "text-emerald-400",
+    tags: ["C++", "Kotlin", "Android Development", "PostgreSQL", "Jira", "Excel"]
   },
   {
     date: "Dec. 2024 - May 2025",
@@ -22,7 +35,7 @@ const experienceItems = [
     company: "Academic Success Center, RIT",
     location: "Rochester, NY",
     blurb:
-      "Coordinating administrative operations such as schedules, logistics, and training for 50+ SI Leaders in the SI program.\nLeading weekly training, reviewing SI session plans, and acting as a mentor figure for current SI Leaders.",
+      "Coordinated administrative operations such as schedules, logistics, and training for 20+ SI Leaders in the SI program.\nLed weekly training, reviewed SI session plans, and acted as a mentor figure for current SI Leaders.",
     accent: "text-emerald-400",
   },
   {
@@ -32,8 +45,9 @@ const experienceItems = [
     company: "American Honda Motor Company",
     location: "Marysville, OH",
     blurb:
-      "Blah blah blah",
+      "Implemented a video stitching program using OpenCV-Python and a PyQt frontend to combine multiple test drive recordings into a single video with customizable layouts, eliminating costly third-party solutions.\nBuilt a Wi-Fi-based protocol layer to interface the app with in-house tools (e.g., CAN loggers, dark current monitors), enabling remote setup and data acquisition, significantly reducing test time for multiple procedures.",
     accent: "text-emerald-400",
+    tags: ["C++", "Kotlin", "Android Development", "Python", "PyQt", "OpenCV"]
   },
   {
     date: "Dec. 2022 - May 2024",
@@ -44,6 +58,7 @@ const experienceItems = [
     blurb:
       "Facilitated 2 weekly study sessions for a two-course Python & Java programming sequence that delves into computational problem solving, covering data structures and algorithms.\nEffectively coordinated additional monthly bonus sessions that garnered 3x the attendance compared to standard sessions.",
     accent: "text-emerald-400",
+    tags: ["Python", "Java"]
   },
 ]
 
@@ -51,7 +66,9 @@ const projectItems = [
   {
     title: "DegreeMap",
     blurb: "Blah blah blah",
+    image: "/images/DegreeMap.png",
     tags: ["React", "TypeScript", "Next.js"],
+    links: [{ label: "GitHub", href: "https://github.com/DegreeMap/DegreeMap"}, { label: "Inspiration", href: "https://www.rit.edu/computing/sites/rit.edu.computing/files/docs/RIT%20SWEN%20Curriculum%20Flowchart%20v12.3_2221.pdf" }],
     accent: "text-emerald-400",
   },
   {
@@ -67,6 +84,7 @@ const projectItems = [
     blurb: "Blah blah blah",
     image: "/images/SseRebuild.png",
     tags: ["Next.js", "TypeScript", "TailwindCSS", "Figma"],
+    links: [{ label: "sse.rit.edu", href: "https://sse.rit.edu" }],
     accent: "text-emerald-400",
   },
 ]
@@ -75,7 +93,7 @@ const Home: React.FC = () => {
   return (
     <div className="homepage">
       <MainNavBar />
-      <div className="inner-homepage">
+      <div id="home" className="inner-homepage">
         <div className="about-section fade-on-load px-50 max-[700px]:px-4">
           <div className="header">
             {/* CLAMP (smoothly changes font size): clamp(min, preferred, max) */}
@@ -87,9 +105,10 @@ const Home: React.FC = () => {
             </h1>
             <h3 className="
                 mt-2
-                text-[clamp(1rem,2.0vw,1.5rem)]
-                leading-snug">
-              Welcome to my site!
+                text-[clamp(.7rem,2.0vw,1.2rem)]
+                leading-snug
+                ">
+              Hi! I’m Chris Morgado — a programmer, rock climber, and pretty decent Minecraft builder! I'm currently studying Software Engineering at the Rochester Institute of Technology, with minors in Computer Engineering and Quantum Information Science & Technology. I have a strong passion for learning and exploring new technologies, with interests spanning embedded development, wireless communication, and full-stack programming.
             </h3>
             <div className="sub-nav-bar gap-3 flex mt-4 flex-wrap">
               <ClearPill
@@ -111,7 +130,7 @@ const Home: React.FC = () => {
               </ClearPill>
 
               <ClearPill
-                href="/resume.pdf"
+                href="/images/ChrisMorgadoResume.pdf"
               >
                 View Resume
               </ClearPill>
@@ -122,14 +141,14 @@ const Home: React.FC = () => {
             <img src="images/me_in_the_wild2.png" style={{ width: '100%', height: '100%' }}></img>
           </div>
         </div>
-        <h1 className="font-bold text-[clamp(1.95rem,6vw,3.5rem)] leading-tight">
+        <h1 id="experience" className="font-bold text-[clamp(1.95rem,6vw,3.5rem)] leading-tight">
           Experience
         </h1>
         <ExperienceTimeline items={experienceItems} />
 
         {/* Projects */}
         <div className="project-scroll fade-on-load">
-          <h1 className="font-bold text-[clamp(1.95rem,6vw,3.5rem)] leading-tight">
+          <h1 id="projects" className="font-bold text-[clamp(1.95rem,6vw,3.5rem)] leading-tight">
             Projects
           </h1>
 
