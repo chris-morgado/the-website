@@ -3,6 +3,7 @@ import MainNavBar from '../components/nav/navbars';
 import { ProjectScrollCard } from '../components/experience/ProjectCard';
 import { ExperienceTimeline } from '../components/experience/ExperienceTimeline';
 import { ClearPill } from '../components/ui/ClearPill';
+import { link } from 'fs';
 
 const experienceItems = [
     {
@@ -34,7 +35,7 @@ const experienceItems = [
     company: "Academic Success Center, RIT",
     location: "Rochester, NY",
     blurb:
-      "Coordinated administrative operations such as schedules, logistics, and training for 30+ SI Leaders in the SI program.\nLed weekly training, reviewed SI session plans, and acted as a mentor figure for current SI Leaders.",
+      "Coordinated administrative operations such as schedules, logistics, and training for 20+ SI Leaders in the SI program.\nLed weekly training, reviewed SI session plans, and acted as a mentor figure for current SI Leaders.",
     accent: "text-emerald-400",
   },
   {
@@ -65,7 +66,9 @@ const projectItems = [
   {
     title: "DegreeMap",
     blurb: "Blah blah blah",
+    image: "/images/DegreeMap.png",
     tags: ["React", "TypeScript", "Next.js"],
+    links: [{ label: "GitHub", href: "https://github.com/DegreeMap/DegreeMap"}, { label: "Inspiration", href: "https://www.rit.edu/computing/sites/rit.edu.computing/files/docs/RIT%20SWEN%20Curriculum%20Flowchart%20v12.3_2221.pdf" }],
     accent: "text-emerald-400",
   },
   {
@@ -81,6 +84,7 @@ const projectItems = [
     blurb: "Blah blah blah",
     image: "/images/SseRebuild.png",
     tags: ["Next.js", "TypeScript", "TailwindCSS", "Figma"],
+    links: [{ label: "sse.rit.edu", href: "https://sse.rit.edu" }],
     accent: "text-emerald-400",
   },
 ]
@@ -101,9 +105,10 @@ const Home: React.FC = () => {
             </h1>
             <h3 className="
                 mt-2
-                text-[clamp(1rem,2.0vw,1.5rem)]
-                leading-snug">
-              Welcome to my site!
+                text-[clamp(.7rem,2.0vw,1.2rem)]
+                leading-snug
+                ">
+              Hi! I’m Chris Morgado — a programmer, rock climber, and pretty decent Minecraft builder! I'm currently studying Software Engineering at the Rochester Institute of Technology, with minors in Computer Engineering and Quantum Information Science & Technology. I have a strong passion for learning and exploring new technologies, with interests spanning embedded development, wireless communication, and full-stack programming.
             </h3>
             <div className="sub-nav-bar gap-3 flex mt-4 flex-wrap">
               <ClearPill
