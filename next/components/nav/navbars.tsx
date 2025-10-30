@@ -11,8 +11,8 @@ const MainNavBar: React.FC = () => {
     const navData: NavItemData[] = [
         { name: "Experience",       link: "#experience" },
         { name: "Projects",         link: "#projects" },
-        { name: "Extracurriculars", link: "#extracurriculars" }, 
-        { name: "Contact",          link: "#contact" },          
+        // { name: "Extracurriculars", link: "#extracurriculars" }, 
+        // { name: "Contact",          link: "#contact" },          
         { name: "Terminal",         link: "/terminal" }
     ];
 
