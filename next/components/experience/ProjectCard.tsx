@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import { ReactNode } from "react";
+import { useRef, ReactNode } from "react";
 
 export type ProjectItem = {
   icon?: ReactNode;
@@ -16,9 +16,10 @@ export type ProjectItem = {
 export function ProjectScrollCard({ project }: {project: ProjectItem}) {
   const blurbLines = project.blurb.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
   const modalId = `modal_${project.title.replace(/\s+/g, '_')}`;
+	const dialogRef = useRef<HTMLDialogElement>(null);
 
   return (
-    <div className="relative w-full max-w-3xl" onClick={()=>document.getElementById(modalId).showModal()}>
+    <div className="relative w-full max-w-3xl" onClick={() => dialogRef.current?.showModal()}>
       <div
         className="absolute left-0 top-0 h-full w-1 rounded-l-2xl"
         style={{ background: project.accent || "rgb(16 185 129)" /* emerald-500 */ }}
