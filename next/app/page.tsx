@@ -59,7 +59,7 @@ const projectItems = [
     blurb: "Blah blah blah",
     image: "/images/IrrigScreen.png",
     tags: ["C++", "ESP32", "Arduino Language", "PlatformIO"],
-    links: [{ label: "GitHub", href: "https://github.com/fkhan224/Irrig"}, { label: "Project Website", href: ""}],
+    links: [{ label: "GitHub", href: "https://github.com/fkhan224/Irrig"}],
     accent: "text-emerald-400",
   },
   {
