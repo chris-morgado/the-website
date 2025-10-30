@@ -18,7 +18,12 @@ export function ProjectScrollCard({ project }: {project: ProjectItem}) {
   const modalId = `modal_${project.title.replace(/\s+/g, '_')}`;
 
   return (
-    <div className="relative w-full max-w-3xl" onClick={()=>document.getElementById(modalId).showModal()}>
+    <div className="relative w-full max-w-3xl" 
+        onClick={() => {
+	      	if (typeof window === "undefined") return;
+	      	const dlg = document.getElementById(modalId) as HTMLDialogElement | null;
+	      	dlg?.showModal();
+	      }}>
       <div
         className="absolute left-0 top-0 h-full w-1 rounded-l-2xl"
         style={{ background: project.accent || "rgb(16 185 129)" /* emerald-500 */ }}
