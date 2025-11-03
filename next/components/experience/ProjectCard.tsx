@@ -14,8 +14,14 @@ export type ProjectItem = {
 };
 
 export function ProjectScrollCard({ project }: {project: ProjectItem}) {
-  const blurbLines = project.blurb.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
   const modalId = `modal_${project.title.replace(/\s+/g, '_')}`;
+  const PREVIEW_LEN = 50;
+
+  const plainBlurb = project.blurb.replace(/\s+/g, " ").trim();
+  const preview =
+    plainBlurb.length > PREVIEW_LEN
+      ? `${plainBlurb.slice(0, PREVIEW_LEN)}…`
+      : plainBlurb;
 
   return (
     <div className="relative w-full max-w-3xl" 
@@ -62,15 +68,14 @@ export function ProjectScrollCard({ project }: {project: ProjectItem}) {
           </h3>
         </header>
 
-        {blurbLines.length > 1 ? (
-          <ul className="mt-3 list-disc list-outside pl-5 text-[clamp(.75rem,.95vw,.95rem)] leading-relaxed text-neutral-300">
-            {blurbLines.map((line, i) => <li key={i}>{line}</li>)}
-          </ul>
-        ) : (
-          <p className="mt-3 leading-relaxed text-[clamp(.75rem,.95vw,.95rem)] text-neutral-300">
-            {blurbLines[0] || ""}
-          </p>
-        )}
+        <p
+          className="mt-3 leading-relaxed text-[clamp(.75rem,.95vw,.95rem)] text-neutral-300"
+          aria-label="Project summary preview"
+          title={plainBlurb}
+        >
+          {preview}{" "}
+          <span className="opacity-70 italic">(Open to read more)</span>
+        </p>
 
         {/* Tags */}
         {project.tags?.length ? (

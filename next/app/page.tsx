@@ -65,7 +65,7 @@ const experienceItems = [
 const projectItems = [
   {
     title: "DegreeMap",
-    blurb: "Blah blah blah",
+    blurb: "Created a full-stack web application aimed at helping students organize and track their academic courses.\nImplemented 15+ RESTful APIs built using Spring Boot with JPA to enable dynamic data exchange between the frontend and a MySQL database hosted locally in a Docker container.\nBuilt a Next.js frontend, using dynamic routing and auth context to support user accounts.",
     image: "/images/DegreeMap.png",
     tags: ["React", "TypeScript", "Next.js"],
     links: [{ label: "GitHub", href: "https://github.com/DegreeMap/DegreeMap"}, { label: "Inspiration", href: "https://www.rit.edu/computing/sites/rit.edu.computing/files/docs/RIT%20SWEN%20Curriculum%20Flowchart%20v12.3_2221.pdf" }],
@@ -73,7 +73,7 @@ const projectItems = [
   },
   {
     title: "Irrig (Smart Irrigation System)",
-    blurb: "Blah blah blah",
+    blurb: "Working on firmware for a portable automated irrigation system to maintain potted plants with minimal user input.\nImplementing a Bluetooth Low Energy protocol layer on an ESP-32 microcontroller to enable connectivity with Android and iOS apps for real-time monitoring and control.",
     image: "/images/IrrigScreen.png",
     tags: ["C++", "ESP32", "Arduino Language", "PlatformIO"],
     links: [{ label: "GitHub", href: "https://github.com/fkhan224/Irrig"}],
@@ -81,7 +81,7 @@ const projectItems = [
   },
   {
     title: "SSE Website Rebuild",
-    blurb: "Blah blah blah",
+    blurb: "Directed a team of 7 developers as the Front-end Team Lead to revamp the front-end portion of the SSE website.\nBuilt responsive front-end components with Next.js and TailwindCSS, displaying dynamic data from backend APIs.\nUtilized GitHub Projects to manage Agile sprints, track progress, and maintain structured development workflows.",
     image: "/images/SseRebuild.png",
     tags: ["Next.js", "TypeScript", "TailwindCSS", "Figma"],
     links: [{ label: "sse.rit.edu", href: "https://sse.rit.edu" }],
