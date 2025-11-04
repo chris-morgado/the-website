@@ -15,7 +15,7 @@ export type ProjectItem = {
 
 export function ProjectScrollCard({ project }: {project: ProjectItem}) {
   const modalId = `modal_${project.title.replace(/\s+/g, '_')}`;
-  const PREVIEW_LEN = 50;
+  const PREVIEW_LEN = 60;
 
   const plainBlurb = project.blurb.replace(/\s+/g, " ").trim();
   const preview =
@@ -76,7 +76,20 @@ export function ProjectScrollCard({ project }: {project: ProjectItem}) {
           {preview}{" "}
           <span className="opacity-70 italic">(Open to read more)</span>
         </p>
-
+        <div className="flex flex-wrap items-center gap-2 mt-3">
+          <p className=""><b>Links:</b></p>  
+          {project.links?.map((link, index) => (
+            <a
+              key={index}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 rounded-full bg-gradient-to-b from-[#292929] to-[#0D0D0D] px-3 py-1.5 text-xs font-medium text-emerald-300 border border-white/10 shadow-sm hover:from-[#444444] hover:to-[#222222] hover:text-emerald-300 transition"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
         {/* Tags */}
         {project.tags?.length ? (
           <div className="mt-4 flex flex-wrap gap-2">
