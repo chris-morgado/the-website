@@ -6,7 +6,18 @@ import { ClearPill } from '../components/ui/ClearPill';
 import { link } from 'fs';
 
 const experienceItems = [
-    {
+  {
+    date: "Oct. 2025 - Current",
+    title: "Undergraduate Volunteer",
+    team: "",
+    company: "Wireless and IoT Security & Privacy (WISP) Lab, RIT",
+    location: "Rochester, NY",
+    blurb:
+      "Conducting research on Vehicle-to-Vehicle (V2V) wireless communication and participating in weekly research paper reviews and discussions.\nRecently joined and am excited to contribute to ongoing projects in the lab!",
+    accent: "text-emerald-400",
+    tags: []    
+  },  
+  {
     date: "Aug. 2025 - Current",
     title: "Supplemental Instruction Program Assistant",
     team: "",
@@ -63,6 +74,14 @@ const experienceItems = [
 ]
 
 const projectItems = [
+    {
+    title: "LyricLens",
+	  blurb: "Developing a project that generates a playlist image based on the songs in a given playlist, utilizing various AWS resources for processing and storage. The project also leverages Terraform for automated CI/CD deployment and infrastructure management.",
+    image: "/images/LyricLens.png",
+    tags: ["Amazon Web Services", "Terraform", "TypeScript", "Next.js"],
+    links: [{ label: "GitHub", href: "https://github.com/LyricsLens/2251-swen514-2-Cumulonimbus-Crew"}],
+    accent: "text-emerald-400",
+  },
   {
     title: "DegreeMap",
     blurb: "Created a full-stack web application aimed at helping students organize and track their academic courses.\nImplemented 15+ RESTful APIs built using Spring Boot with JPA to enable dynamic data exchange between the frontend and a MySQL database hosted locally in a Docker container.\nBuilt a Next.js frontend, using dynamic routing and auth context to support user accounts.",
@@ -97,17 +116,10 @@ const Home: React.FC = () => {
         <div className="about-section fade-on-load px-50 max-[700px]:px-4">
           <div className="header">
             {/* CLAMP (smoothly changes font size): clamp(min, preferred, max) */}
-            <h1 className="
-                font-bold
-                text-[clamp(2.75rem,6vw,4.5rem)]
-                leading-tight">
+            <h1 className="font-bold text-[clamp(2.75rem,6vw,4.5rem)] leading-tight">
               Chris Morgado
             </h1>
-            <h3 className="
-                mt-2
-                text-[clamp(.7rem,2.0vw,1.2rem)]
-                leading-snug
-                ">
+            <h3 className="mt-2 text-[clamp(.7rem,2.0vw,1.2rem)] leading-snug">
               Hi! I’m Chris Morgado — a programmer, rock climber, and pretty decent Minecraft builder! I'm currently studying Software Engineering at the Rochester Institute of Technology, with minors in Computer Engineering and Quantum Information Science & Technology. I have a strong passion for learning and exploring new technologies, with interests spanning embedded development, wireless communication, and full-stack programming.
             </h3>
             <div className="sub-nav-bar gap-3 flex mt-4 flex-wrap">
@@ -156,6 +168,7 @@ const Home: React.FC = () => {
             <ProjectScrollCard project={projectItems[0]} ></ProjectScrollCard>
             <ProjectScrollCard project={projectItems[1]} ></ProjectScrollCard>
             <ProjectScrollCard project={projectItems[2]} ></ProjectScrollCard>
+            <ProjectScrollCard project={projectItems[3]} ></ProjectScrollCard>
           </div>
         </div>
       </div>
