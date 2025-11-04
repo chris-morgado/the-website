@@ -20,12 +20,7 @@ const MainNavBar: React.FC = () => {
     const modalId = "modal_lets_connect";
 
     return (
-        <div className="navbar shadow-sm px-8 sm:px-4 xs:px-2"
-            onClick={() => {
-                if (typeof window === "undefined") return;
-                const dlg = document.getElementById(modalId) as HTMLDialogElement | null;
-                dlg?.showModal();
-            }}>
+        <div className="navbar shadow-sm px-8 sm:px-4 xs:px-2">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -48,7 +43,12 @@ const MainNavBar: React.FC = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className="btn bg-white text-black  border-black hover:bg-gray-300 hover:border-gray-400">
+                <button className="btn bg-white text-black  border-black hover:bg-gray-300 hover:border-gray-400"
+                    onClick={() => {
+                        if (typeof window === "undefined") return;
+                        const dlg = document.getElementById(modalId) as HTMLDialogElement | null;
+                        dlg?.showModal();
+                    }}>
                     <svg aria-label="Email icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" fill="none" stroke="black"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></g></svg>
                     Let's Connect!
                 </button>
@@ -78,8 +78,6 @@ const MainNavBar: React.FC = () => {
                                         My Email: cmmorgado53@gmail.com
                                     </ClearPill>
                                 </div>
-
-                                {/* Remaining pills — stay centered on next line */}
                                 <div className="flex justify-center gap-3 w-full sm:w-auto">
                                     <ClearPill
                                         href="https://www.linkedin.com/in/chris-morgado/"
@@ -112,44 +110,51 @@ const MainNavBar: React.FC = () => {
 
                                 <form
                                     className="mt-4 space-y-3"
-                                    onSubmit={async (e) => {
-                                        // e.preventDefault();
-                                        // const form = e.currentTarget as HTMLFormElement;
-                                        // const data = {
-                                        //     name: (form.elements.namedItem('name') as HTMLInputElement).value,
-                                        //     email: (form.elements.namedItem('email') as HTMLInputElement).value,
-                                        //     message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
-                                        // };
-                                        // // TODO: replace with your API route or form service
-                                        // await fetch('/api/contact', {
-                                        //     method: 'POST',
-                                        //     headers: { 'Content-Type': 'application/json' },
-                                        //     body: JSON.stringify(data),
-                                        // });
-                                        // (form.closest('dialog') as HTMLDialogElement)?.close();
+                                    onSubmit={(e) => {
+                                        e.preventDefault();
+                                        const form = e.currentTarget as HTMLFormElement;
+                                        const nameInput = form.elements.namedItem('name') as HTMLInputElement;
+                                        const emailInput = form.elements.namedItem('email') as HTMLInputElement;
+                                        const messageInput = form.elements.namedItem('message') as HTMLTextAreaElement;
+
+                                        // const name = nameInput.value;
+                                        // const email = emailInput.value;
+                                        // const message = messageInput.value;
+
+                                        // const to = "cmmorgado53@gmail.com";
+                                        // const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+                                        // const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+
+                                        // window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+
+                                        nameInput.value = "";
+                                        emailInput.value = "";
+                                        messageInput.value = "";
+
+                                        (form.closest('dialog') as HTMLDialogElement)?.close();
                                     }}
                                 >
                                     <input
                                         name="name"
                                         type="text"
                                         placeholder="Your Name"
-                                        className="input input-bordered w-full"
+                                        className="input input-bordered w-full bg-gradient-to-b from-[#363636] to-[#242424]"
                                         required
                                     />
                                     <input
                                         name="email"
                                         type="email"
                                         placeholder="Your Email"
-                                        className="input input-bordered w-full"
+                                        className="input input-bordered w-full bg-gradient-to-b from-[#363636] to-[#242424]"
                                         required
                                     />
                                     <textarea
                                         name="message"
                                         placeholder="Your Message"
-                                        className="textarea textarea-bordered w-full h-32"
+                                        className="textarea textarea-bordered w-full h-32 bg-gradient-to-b from-[#363636] to-[#242424]"
                                         required
                                     />
-                                    <button className="btn btn-primary w-full mt-2">
+                                    <button type="submit" className="btn btn-primary w-full mt-2">
                                         Send Message
                                     </button>
                                 </form>
