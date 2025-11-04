@@ -116,17 +116,10 @@ const Home: React.FC = () => {
         <div className="about-section fade-on-load px-50 max-[700px]:px-4">
           <div className="header">
             {/* CLAMP (smoothly changes font size): clamp(min, preferred, max) */}
-            <h1 className="
-                font-bold
-                text-[clamp(2.75rem,6vw,4.5rem)]
-                leading-tight">
+            <h1 className="font-bold text-[clamp(2.75rem,6vw,4.5rem)] leading-tight">
               Chris Morgado
             </h1>
-            <h3 className="
-                mt-2
-                text-[clamp(.7rem,2.0vw,1.2rem)]
-                leading-snug
-                ">
+            <h3 className="mt-2 text-[clamp(.7rem,2.0vw,1.2rem)] leading-snug">
               Hi! I’m Chris Morgado — a programmer, rock climber, and pretty decent Minecraft builder! I'm currently studying Software Engineering at the Rochester Institute of Technology, with minors in Computer Engineering and Quantum Information Science & Technology. I have a strong passion for learning and exploring new technologies, with interests spanning embedded development, wireless communication, and full-stack programming.
             </h3>
             <div className="sub-nav-bar gap-3 flex mt-4 flex-wrap">
