@@ -43,7 +43,7 @@ const MainNavBar: React.FC = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className="btn bg-white text-black  border-black hover:bg-gray-300 hover:border-gray-400"
+                {/* <button className="btn bg-white text-black  border-black hover:bg-gray-300 hover:border-gray-400"
                     onClick={() => {
                         if (typeof window === "undefined") return;
                         const dlg = document.getElementById(modalId) as HTMLDialogElement | null;
@@ -51,7 +51,7 @@ const MainNavBar: React.FC = () => {
                     }}>
                     <svg aria-label="Email icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" fill="none" stroke="black"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></g></svg>
                     Let's Connect!
-                </button>
+                </button> */}
             </div>
             <dialog id={modalId} className="modal">
                 <div className="modal-box max-w-4xl p-0 bg-transparent shadow-none">
