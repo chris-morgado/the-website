@@ -14,15 +14,15 @@ variable "index_html_content" {
 }
 variable "domain_root" {
   type    = string
-  default = "chrismorgado.com"
+  default = "christinemorgado.com"
 }
 variable "domain_www" {
   type    = string
-  default = "www.chrismorgado.com"
+  default = "www.christinemorgado.com"
 }
 variable "cloudflare_zone_name" {
   type    = string
-  default = "chrismorgado.com"
+  default = "christinemorgado.com"
 }
 variable "cloudflare_api_token" {
   type = string
