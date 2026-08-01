@@ -1,37 +1,62 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+/* --- cursor blink --- */
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.cursor-blink {
+    color: rosybrown;
+    animation: blink 0.5s step-end alternate infinite;
+}
+
 /* --- fade-up animation --- */
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(18px); }
-  to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* make it pop up when it appears on page */
 html:not(.page-ready) .fade-on-load {
-  opacity: 0;
-  transform: translateY(18px);
+    opacity: 0;
+    transform: translateY(18px);
 }
 
 /* when ready, animate */
 html.page-ready .fade-on-load {
-  animation: fade-up .6s ease-out both;
-  animation-delay: var(--delay, 0ms); /* optional stagger */
+    animation: fade-up 0.6s ease-out both;
+    animation-delay: var(--delay, 0ms); /* optional stagger */
 }
 
 /* accessibility */
 @media (prefers-reduced-motion: reduce) {
-  html.page-ready .fade-on-load {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
+    html.page-ready .fade-on-load {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
 }
 
 /* Global styles */
-html, body {
+html,
+body {
     background: rgb(12, 12, 12);
-    font-family: var(--font-rethink), system-ui, -apple-system, sans-serif;
+    font-family:
+        var(--font-rethink),
+        system-ui,
+        -apple-system,
+        sans-serif;
     color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
@@ -40,14 +65,14 @@ html, body {
 
 /* Fixing timeline spacing */
 .timeline > li {
-	grid-template-columns: 0 1fr 3fr !important;
+    grid-template-columns: 0 1fr 3fr !important;
 }
 .timeline > li .timeline-start {
-	display: none !important;
+    display: none !important;
 }
 
 .timeline-vertical > li {
-	grid-template-columns: 0 max-content 1fr !important;
+    grid-template-columns: 0 max-content 1fr !important;
 }
 
 .homepage {
@@ -64,13 +89,12 @@ html, body {
 .sub-nav-bar {
     display: flex;
     flex-flow: row nowrap;
-    
+
     margin-top: 25px;
     margin-bottom: 0 auto;
     margin-left: 0 auto;
     margin-right: 0 auto;
-    
-    
+
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -99,7 +123,7 @@ html, body {
     height: 100%;
 }
 
-.nav-item{
+.nav-item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,19 +131,22 @@ html, body {
     width: 7%;
     background-color: rgb(57, 57, 57);
     border-radius: 5px;
-    
+
     text-decoration: none;
     font-weight: 700;
     font-style: normal;
     font-size: large;
     color: rgb(255, 255, 255);
-    
+
     padding-left: 15px;
     padding-right: 15px;
     margin-left: 20px;
     margin-right: 20px;
-    
-    transition: transform 0.2s, background-color 0.1s, color 0.1s; 
+
+    transition:
+        transform 0.2s,
+        background-color 0.1s,
+        color 0.1s;
 }
 .sub-nav-bar > .nav-item {
     height: 120%;
@@ -128,14 +155,14 @@ html, body {
     justify-content: center;
 }
 
-.nav-item:hover{
+.nav-item:hover {
     background-color: rgb(43, 43, 43);
     color: rgb(234, 232, 232);
     transform: scale(1.1);
     cursor: pointer;
 }
 
-.nav-item:active{
+.nav-item:active {
     background-color: rgb(6, 6, 6);
     transform: scale(1.05);
 }
@@ -163,7 +190,7 @@ html, body {
         font-size: small;
     }
     .sub-nav-bar > .nav-item {
-        font-size: .9em;
+        font-size: 0.9em;
     }
 }
 @media (max-width: 650px) {
@@ -171,7 +198,7 @@ html, body {
         font-size: smaller;
     }
     .sub-nav-bar > .nav-item {
-        font-size: .6em;
+        font-size: 0.6em;
     }
 }
 
@@ -218,24 +245,24 @@ h1 {
     width: 100%;
     text-align: center;
 }
-@media (max-width: 1388px) { 
+@media (max-width: 1388px) {
     .header {
         width: 100%;
-        justify-content: center; 
+        justify-content: center;
     }
     .picture {
         width: 100%;
-        justify-content: center; 
+        justify-content: center;
     }
 }
-/* @media (min-width: 530px) { 
+/* @media (min-width: 530px) {
     .header {
         width: 100%;
-        justify-content: center; 
+        justify-content: center;
     }
     .picture {
         width: 100%;
-        justify-content: center; 
+        justify-content: center;
     }
 } */
 
@@ -244,22 +271,21 @@ h1 {
     margin-right: 20%;
 }
 
-.project-page-container > h1{
+.project-page-container > h1 {
     /* font-size: 60px; */
     margin-bottom: 0;
 }
-.project-page-container > h3{
+.project-page-container > h3 {
     font-size: 25ox;
     font-weight: 400;
     margin-top: 10px;
     margin-bottom: 50px;
 }
-.project-page-container > p{
+.project-page-container > p {
     font-size: 15px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
-
 
 .project-scroll-container {
     padding: 20px;
@@ -273,7 +299,7 @@ h1 {
 .project-scroll {
     margin-top: 20px;
     margin-bottom: 20px;
-    gap: 10px; 
+    gap: 10px;
     padding: 10px 0;
 }
 
@@ -281,48 +307,48 @@ h1 {
     background: linear-gradient(rgb(245, 245, 245), rgb(196, 196, 196));
     border-radius: 8px;
     padding: 20px;
-    transition: transform .5s;
+    transition: transform 0.5s;
     text-decoration: none;
     color: black;
-  }
-  .project-scroll-card:hover {
+}
+.project-scroll-card:hover {
     background: linear-gradient(rgb(255, 255, 255), rgb(239, 239, 239));
-    transform: scale(1.10);
-  }
-  .project-scroll-card:active{
+    transform: scale(1.1);
+}
+.project-scroll-card:active {
     background: linear-gradient(rgb(211, 211, 211), rgb(189, 189, 189));
     transform: scale(1.05);
-  }
-  
-  h2 {
-    margin-bottom: 5px;
-  }
-  
-  .contact-section {
-    margin-top: 10px;
-  }
+}
 
-  .contact-component {
+h2 {
+    margin-bottom: 5px;
+}
+
+.contact-section {
+    margin-top: 10px;
+}
+
+.contact-component {
     color: rgb(86, 173, 239);
-    text-decoration: none;    
-  }
+    text-decoration: none;
+}
 
 /* Animations */
 @keyframes fadeIn {
-    /* 
+    /*
         0%   {background-color:red; left:0px; top:0px;}
         25%  {background-color:yellow; left:200px; top:0px;}
         50%  {background-color:blue; left:200px; top:200px;}
         75%  {background-color:green; left:0px; top:200px;}
-        100% {background-color:red; left:0px; top:0px;} 
+        100% {background-color:red; left:0px; top:0px;}
     */
-    
-    0% { 
-        opacity: 0; 
+
+    0% {
+        opacity: 0;
         top: 200px;
     }
-    100% { 
-        opacity: 1; 
+    100% {
+        opacity: 1;
         top: 0px;
     }
 }
