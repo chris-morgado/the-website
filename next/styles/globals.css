@@ -15,7 +15,7 @@ html:not(.page-ready) .fade-on-load {
 
 /* when ready, animate */
 html.page-ready .fade-on-load {
-  animation: fade-up .6s ease-out forwards;
+  animation: fade-up .6s ease-out both;
   animation-delay: var(--delay, 0ms); /* optional stagger */
 }
 
