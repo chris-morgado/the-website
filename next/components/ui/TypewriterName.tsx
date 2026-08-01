@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 
-const NAME = "Hi, I'm Christine Morgado";
-const TYPING_SPEED_MS = 75;
+const NAME = "Hi, I'm Christine Morgado.";
+const TYPING_SPEED_MS = 65;
 
 export function TypewriterName() {
   const [displayed, setDisplayed] = useState("");
