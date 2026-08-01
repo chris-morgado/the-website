@@ -145,38 +145,34 @@ const Home: React.FC = () => {
               <div className="text-[clamp(0.85rem,1.5vw,1.05rem)] text-gray-300 space-y-4">
                 <FadeIn delay={800}>
                   <p>
-                    I am a Software Engineer focused on building resilient,
-                    scalable distributed systems that solve real-world
-                    operational challenges. Currently a CS Senior at RIT, I’ve
-                    spent my recent co-ops moving beyond just writing code to
-                    architecting production-grade solutions.
+                    I'm a software engineer who loves building things,
+                    especially resilient, scalable distributed systems that
+                    solve real operational problems. I'm currently a Software
+                    Engineering senior at RIT, and through recent co-ops and
+                    projects I've moved past just writing code and into
+                    designing solutions built for production.
                   </p>
                 </FadeIn>
 
                 <div>
                   <FadeIn delay={950}>
-                  <p className="text-white font-semibold mb-2">
-                    What I’ve delivered:
+                    <p className="text-white font-semibold mb-2">
+                      What I’ve delivered:
                     </p>
                   </FadeIn>
                   <ul className="space-y-2 pl-1">
                     <FadeIn delay={1050}>
                       <li>
                         <span className="text-white font-medium">
-                          At Volo Sports:
+                          At Excellus BCBS:
                         </span>{" "}
-                        Automated manual workflows for 15+ national teams,
-                        reducing task completion time by 60% and optimizing data
-                        scripts to run 40x faster.
                       </li>
                     </FadeIn>
                     <FadeIn delay={1100}>
                       <li>
                         <span className="text-white font-medium">
-                          At BenefAI:
+                          At Honda:
                         </span>{" "}
-                        Slashed product discovery latency by 98% and maintained
-                        99.9% uptime for GenAI-driven customer interfaces.
                       </li>
                     </FadeIn>
                     <FadeIn delay={1200}>
@@ -192,24 +188,6 @@ const Home: React.FC = () => {
                   </ul>
                 </div>
 
-                <FadeIn delay={1600}>
-                  <p>
-                    I thrive at the intersection of Backend Engineering and
-                    DevOps, leveraging tools like Go, Kubernetes, and Terraform
-                    to ensure system modularity and high availability.
-                  </p>
-                </FadeIn>
-
-                <FadeIn delay={1800}>
-                  <p>
-                    <span className="text-white font-medium">
-                      Technical Stack:
-                    </span>{" "}
-                    Python, Go, TypeScript, AWS (CDK/EC2), Docker, Kubernetes,
-                    PostgreSQL, Redis.
-                  </p>
-                </FadeIn>
-
                 <FadeIn delay={2000}>
                   <p>
                     I’m currently looking for New Grad Software Engineering
@@ -219,8 +197,8 @@ const Home: React.FC = () => {
                     </span>
                   </p>
                 </FadeIn>
-              </div>  {/* end bio div */}
-
+              </div>{" "}
+              {/* end bio div */}
               <FadeIn delay={2200}>
                 <div className="flex gap-3 flex-wrap mt-8">
                   <ClearPill
