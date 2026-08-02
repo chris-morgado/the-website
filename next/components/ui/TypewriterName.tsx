@@ -20,11 +20,16 @@ export function TypewriterName() {
   const [done, setDone] = useState(false);
   const [cursorVisible, setCursorVisible] = useState(true);
 
+  const shouldBlink = phase === "waiting" || done;
+
   useEffect(() => {
-    if (!done) return;
+    if (!shouldBlink) {
+      setCursorVisible(true);
+      return;
+    }
     const interval = setInterval(() => setCursorVisible((v) => !v), 500);
     return () => clearInterval(interval);
-  }, [done]);
+  }, [shouldBlink]);
 
   useEffect(() => {
     const seg = SEGMENTS[currentSeg];

@@ -202,7 +202,7 @@ const Home: React.FC = () => {
               <FadeIn delay={2200}>
                 <div className="flex gap-3 flex-wrap mt-8">
                   <ClearPill
-                    href="https://github.com/chris-morgado"
+                    href="https://github.com/christine-morgado"
                     icon={
                       <svg
                         aria-label="GitHub logo"
@@ -222,7 +222,7 @@ const Home: React.FC = () => {
                   </ClearPill>
 
                   <ClearPill
-                    href="https://www.linkedin.com/in/chris-morgado/"
+                    href="https://www.linkedin.com/in/christine-morgado/"
                     icon={
                       <svg
                         aria-label="LinkedIn logo"
@@ -242,7 +242,7 @@ const Home: React.FC = () => {
                     LinkedIn
                   </ClearPill>
 
-                  <ClearPill href="/images/ChrisMorgadoResume.pdf">
+                  <ClearPill href="/images/workinprogress.pdf">
                     View Resume
                   </ClearPill>
                 </div>
