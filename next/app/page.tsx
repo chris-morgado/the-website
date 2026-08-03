@@ -203,7 +203,7 @@ const Home: React.FC = () => {
                 <FadeIn delay={2000}>
                   <p>
                     I’m currently looking for New Grad Software Engineering
-                    roles for Summer 2026.{" "}
+                    roles for Summer 2027.{" "}
                     <span className="text-white font-medium">
                       Let’s connect!
                     </span>
