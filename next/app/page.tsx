@@ -209,9 +209,10 @@ const Home: React.FC = () => {
                 </div>
 
                 <FadeIn delay={2000}>
-                  <p>
+                  <p className="text-center text-2xl mt-14">
                     I’m currently looking for New Grad Software Engineering
-                    roles for Summer 2027.{" "}
+                    roles for Summer 2027.
+                    <br />
                     <span className="text-white font-medium">
                       Let’s connect!
                     </span>
@@ -220,7 +221,7 @@ const Home: React.FC = () => {
               </div>{" "}
               {/* end bio div */}
               <FadeIn delay={2200}>
-                <div className="flex gap-3 flex-wrap mt-8">
+                <div className="flex gap-3 flex-wrap mt-8 justify-center">
                   <ClearPill
                     href="https://github.com/christine-morgado"
                     icon={
