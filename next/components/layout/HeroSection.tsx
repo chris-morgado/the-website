@@ -155,33 +155,38 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll indicator — fades out once user scrolls */}
-      <a
-        href="#experience"
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all duration-700"
-        style={{
-          opacity: scrolled ? 0 : 1,
-          pointerEvents: scrolled ? "none" : "auto",
-        }}
+      {/* Scroll indicator */}
+      <div
+        className="fade-on-load absolute bottom-10 left-1/2 -translate-x-1/2"
+        style={{ "--delay": "3300ms" } as React.CSSProperties}
       >
-        <span className="text-xs uppercase tracking-widest text-neutral-500">
-          scroll for more
-        </span>
-        <div className="bounce-y text-neutral-500">
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </div>
-      </a>
+        <a
+          href="#experience"
+          className="flex flex-col items-center gap-2 transition-all duration-700"
+          style={{
+            opacity: scrolled ? 0 : 1,
+            pointerEvents: scrolled ? "none" : "auto",
+          }}
+        >
+          <span className="text-xs uppercase tracking-widest text-neutral-500">
+            scroll for more
+          </span>
+          <div className="bounce-y text-neutral-500">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </div>
+        </a>
+      </div>
     </section>
   );
 }

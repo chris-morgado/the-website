@@ -10,7 +10,7 @@ interface Segment {
 
 const SEGMENTS: Segment[] = [
   { text: "Hi, I'm Christine Morgado.", delay: 0, typingSpeed: 65 },
-  { text: " :)", delay: 2300, typingSpeed: 200 },
+  { text: " :)", delay: 2000, typingSpeed: 200 },
 ];
 
 export function TypewriterName() {
