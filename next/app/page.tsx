@@ -160,7 +160,7 @@ const Home: React.FC = () => {
                       What I’ve delivered:
                     </p>
                   </FadeIn>
-                  <ul className="space-y-2 pl-1">
+                  <ul className="space-y-2 pl-5">
                     <FadeIn delay={1050}>
                       <li>
                         <span className="text-white font-medium">
@@ -172,17 +172,29 @@ const Home: React.FC = () => {
                       <li>
                         <span className="text-white font-medium">
                           At Honda:
-                        </span>{" "}
-                      </li>
-                    </FadeIn>
-                    <FadeIn delay={1200}>
-                      <li>
-                        <span className="text-white font-medium">
-                          Personal Projects:
-                        </span>{" "}
-                        Engineered a Go-based financial metrics tracker that
-                        handles 10k+ concurrent packets with sub-millisecond
-                        latency using the Reactor pattern.
+                        </span>
+                        <ul className="list-disc pl-5 mt-1">
+                          <li>
+                            Designed and shipped a suite of 4 Android-based
+                            testing and data-collection tools adopted by ~15
+                            engineers across 3 departments, cutting select test
+                            crews from 2 engineers to 1 and automating manual
+                            data collection across vehicle test programs. (See{" "}
+                            <a
+                              href="/#experience"
+                              className="text-white underline underline-offset-2"
+                            >
+                              /experience
+                            </a>{" "}
+                            for more details).
+                          </li>
+                          <li>
+                            Built a Next.js/Flask dashboard that automated
+                            vehicle test data reporting, reducing report
+                            generation time by ~95% and eliminating manual
+                            entry.
+                          </li>
+                        </ul>
                       </li>
                     </FadeIn>
                   </ul>
