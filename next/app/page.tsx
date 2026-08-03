@@ -164,8 +164,16 @@ const Home: React.FC = () => {
                     <FadeIn delay={1050}>
                       <li>
                         <span className="text-white font-medium">
-                          At Excellus BCBS:
+                          At Excellus BlueCross BlueShield:
                         </span>{" "}
+                        <ul className="list-disc pl-5 mt-1">
+                          <li>
+                            Engineered an AI agent workflow system for medical
+                            appeal automation using Python, Databricks, and
+                            LangChain / LangGraph, reducing manual case review
+                            time by an estimated 80%.
+                          </li>
+                        </ul>
                       </li>
                     </FadeIn>
                     <FadeIn delay={1100}>
