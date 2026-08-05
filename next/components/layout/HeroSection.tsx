@@ -63,12 +63,12 @@ export function HeroSection() {
           <div className="text-[clamp(0.85rem,1.5vw,1.05rem)] text-gray-300 space-y-4">
             <FadeIn delay={800}>
               <p>
-                I'm a software engineer who loves building things, especially
-                resilient, scalable distributed systems that solve real
-                operational problems. I'm currently a Software Engineering
-                senior at RIT, and through recent co-ops and projects I've moved
-                past just writing code and into designing solutions built for
-                production.
+                I'm a software engineer who loves building thing, from AI agent
+                systems to full-stack tools that automate manual work and solve
+                real operational problems. I'm currently a Software Engineering
+                senior at RIT, and through recent co-ops I've moved past just
+                writing code and into designing and shipping production-grade
+                systems.
               </p>
             </FadeIn>
 
@@ -87,7 +87,7 @@ export function HeroSection() {
                     <ul className="list-disc pl-5 mt-1">
                       <li>
                         Engineered an AI agent workflow system for medical
-                        appeal automation using Python, Databricks, and
+                        appeal processing using Python, Databricks, and
                         LangChain / LangGraph, reducing manual case review time
                         by an estimated 80%.
                       </li>
