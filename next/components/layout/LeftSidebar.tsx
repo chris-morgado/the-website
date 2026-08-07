@@ -134,7 +134,7 @@ export function LeftSidebar() {
           {LI_ICON}
         </a>
         <a
-          href="/images/workinprogress.pdf"
+          href="/images/ChristineMorgadoResume.pdf"
           target="_blank"
           rel="noreferrer"
           className="hover:text-white transition-colors"

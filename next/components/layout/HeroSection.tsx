@@ -147,7 +147,7 @@ export function HeroSection() {
               >
                 LinkedIn
               </ClearPill>
-              <ClearPill href="/images/workinprogress.pdf">
+              <ClearPill href="/images/ChristineMorgadoResume.pdf">
                 View Resume
               </ClearPill>
             </div>
