@@ -90,7 +90,7 @@ const MainNavBar: React.FC = () => {
                                         My LinkedIn
                                     </ClearPill>
 
-                                    <ClearPill href="/images/ChrisMorgadoResume.pdf">
+                                    <ClearPill href="/images/ChristineMorgadoResume.pdf">
                                         My Resume
                                     </ClearPill>
                                 </div>
