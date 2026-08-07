@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(gh run *)",
+      "Bash(terraform version *)",
+      "Bash(git -C /c/Users/cmmor/Repos/projects/the-website log --oneline -5 main)",
+      "Bash(git -C /c/Users/cmmor/Repos/projects/the-website status)",
+      "Bash(git -C /c/Users/cmmor/Repos/projects/the-website log --oneline -5)",
+      "Bash(aws sts get-caller-identity *)"
     ]
   }
 }
