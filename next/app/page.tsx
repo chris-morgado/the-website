@@ -29,17 +29,6 @@ const experienceItems: ExperienceItem[] = [
     tags: ["Next.js", "PostgreSQL", "Python", "Kotlin"],
   },
   {
-    date: "Aug. 2025 - Current",
-    title: "Supplemental Instruction Program Assistant",
-    team: "",
-    company: "Academic Success Center, RIT",
-    location: "Rochester, NY",
-    blurb:
-      "Currently continuing my role as a Program Assistant during a period of rapid growth, supporting coordination and training for an expanded group of 50+ SI Leaders.\nRevamping data organization to make processes more efficient and support program growth.",
-    accent: "text-emerald-400",
-    tags: ["Python", "Google Apps Script"],
-  },
-  {
     date: "May 2025 - Aug. 2025",
     title: "Software Engineer Intern",
     team: "",
